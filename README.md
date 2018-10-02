@@ -6,7 +6,7 @@ Yes we are working on this again and fixing / adding features that the people wa
 # Current 1.8 community devs
     Duke   
     Ghosty
-    
+    Sen
 
 ---
 
