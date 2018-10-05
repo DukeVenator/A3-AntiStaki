@@ -39,7 +39,8 @@ caja call jn_fnc_arsenal_init;
 
 [] execVM "Scripts\fn_advancedTowingInit.sqf";
 [] execVM "Dialogs\welcome.sqf";
-//[] execVM "scripts\ChairInit.sqf";
+[] execVM "Scripts\duke_uphillMovement.sqf";
+[] execVM "Scripts\duke_playerAddtoZeus.sqf";
 
 if(isServer) then {
     _serverHasID = profileNameSpace getVariable ["SS_ServerID",nil];
