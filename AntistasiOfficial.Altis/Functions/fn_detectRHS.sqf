@@ -5,6 +5,7 @@ activeAFRF = false;
 activeUSAF = false;
 activeGREF = false;
 activeBW = false;
+activeUNSC = false;
 
 // Initial side definitions, which might be overwritten by the templates
 side_blue = west;
