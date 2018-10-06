@@ -49,7 +49,7 @@ if (_resourcesAAF > 5000) then{
 
 if (_cuenta == 0) exitWith {resourcesIsChanging = false};
 
-if (((planesAAFcurrent < planesAAFmax) and (helisAAFcurrent > 3)) and (_cuenta > 4)) then {
+if (((planesAAFcurrent < planesAAFmax) and (helisAAFcurrent > 3)) and (_cuenta > 6)) then {
 	if (_resourcesAAF > (17500*_multiplicador)) then {
 		if (count indAirForce < 2) then {
 			indAirForce = indAirForce + planes;

@@ -7,7 +7,7 @@ OnLoadMission = "Be a Resistance Leader - Be a Hero W.I.P";
 loadScreen = "pic.paa";
 
 overviewText = "Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.";
-overviewPicture = "pic.jpg";
+overviewPicture = "pic.paa";
 
 allowFunctionsLog = 1;
 enableDebugConsole = 1;
@@ -54,18 +54,6 @@ maxplayers=52;
 
 class CfgSounds
 {
-    class jammer_loop
-  {
-        name = "jammer_loop";
-        sound[] = {"\sound\jammer_Effect.ogg", db+2, 1};
-        titles[] = {1,""};
-    };
-    class power_down
-    {
-        name = "power_down";
-        sound[] = {"\sound\power_down.ogg", db+6, 1};
-        titles[] = {1,""};
-    };
     class fire
     {
         name="fire";

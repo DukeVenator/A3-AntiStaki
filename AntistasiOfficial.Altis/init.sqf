@@ -39,7 +39,6 @@ caja call jn_fnc_arsenal_init;
 
 [] execVM "Scripts\fn_advancedTowingInit.sqf";
 [] execVM "Dialogs\welcome.sqf";
-//[] execVM "scripts\ChairInit.sqf";
 
 if(isServer) then {
     _serverHasID = profileNameSpace getVariable ["SS_ServerID",nil];
