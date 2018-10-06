@@ -60,6 +60,18 @@ class CfgSounds
         sound[]={"Music\fire.ogg",db+12,1.0};
         titles[]={};
     };
+    class jammer_loop
+    {
+        name = "jammer_loop";
+        sound[] = {"\sound\jammer_Effect.ogg", db+15, 1};
+        titles[] = {1,""};
+    };
+    class power_down
+    {
+      name = "power_down";
+      sound[] = {"\sound\power_down.ogg", db+15, 1};
+      titles[] = {1,""};
+    };
 };
 class CfgIdentities
 {

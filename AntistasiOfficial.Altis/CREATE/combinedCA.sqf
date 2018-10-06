@@ -369,7 +369,7 @@ if !(_marker in mrkAAF) then {
 	};
 };
 
-[1000] remoteExec ["AS_fnc_increaseAttackTimer",2];
+[1600] remoteExec ["AS_fnc_increaseAttackTimer",2];
 if (cuentaCA < 0) then {
 	cuentaCA = 1200;
 };

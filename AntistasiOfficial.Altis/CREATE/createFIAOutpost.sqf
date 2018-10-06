@@ -16,7 +16,7 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 
 //Add staticgun depending on the kind of building (this mechanic is poor, you have them for free and automatically, it give meaning into not destroying outpost buildings tho.)
 	_groupGunners = createGroup side_blue;
-	/*for "_i" from 0 to (count _buildings) - 1 do {
+	for "_i" from 0 to (count _buildings) - 1 do {
 		_building = _buildings select _i;
 		_type = typeOf _building;
 		call {
@@ -62,7 +62,8 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 				sleep 1;
 			};
 		};
-	};*/ //Disabled, those are added out from no-where, in future this can become a sort of upgrade
+	};
+//Disabled, those are added out from no-where, in future this can become a sort of upgrade
 
 /*Jam  feature disabled untill jam will have a function in AirControl patch
 	_antenna = [antenas,_markerPos] call BIS_fnc_nearestPosition;
