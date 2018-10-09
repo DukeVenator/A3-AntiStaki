@@ -37,13 +37,13 @@ guer_stat_MGH = "I_HMG_01_high_F";
 guer_stat_AT = "I_static_AT_F";
 guer_stat_AA = "I_static_AA_F";
 
-guer_cfg_inf = (configfile >> "CfgGroups" >> "independent" >> "Guerilla" >> "Infantry");
+guer_cfg_inf = (configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry");
 
-guer_grp_sniper = "IRG_SniperTeam_M";
-guer_grp_sentry = "IRG_InfSentry";
-guer_grp_AT = "IRG_InfTeam_AT";
-guer_grp_squad = "IRG_InfSquad";
-guer_grp_team = "IRG_InfTeam";
+guer_grp_sniper = "HAF_SniperTeam_M";
+guer_grp_sentry = "HAF_InfSentry";
+guer_grp_AT = "HAF_InfTeam_AT";
+guer_grp_squad = "HAF_InfSquad";
+guer_grp_team = "HAF_InfTeam";
 
 guer_flag = "Flag_FIA_F";
 
