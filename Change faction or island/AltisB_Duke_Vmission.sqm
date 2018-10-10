@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=460;
+		nextID=452;
 	};
 	class Camera
 	{
-		pos[]={3604.0989,38.336132,10252.613};
-		dir[]={0.50075889,-0.60211998,0.62186551};
-		up[]={0.37765399,0.79839259,0.46898729};
-		aside[]={0.77887964,-2.0524021e-007,-0.62719667};
+		pos[]={3678.2534,41.384926,10301.575};
+		dir[]={0,-0.70710677,0.70710683};
+		up[]={0,0.70710677,0.70710671};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -48,13 +48,14 @@ addons[]=
 	"A3_Structures_F_Ind_AirPort",
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Structures_F_Argo_Military_Fortifications",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"task_force_radio_items"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -146,6 +147,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item13
+		{
+			className="task_force_radio_items";
+			name="task_force_radio_items";
+			author="[TF]Nkey";
+			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
+		};
 	};
 };
 randomSeed=8109385;
@@ -204,7 +212,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=327;
+		items=334;
 		class Item0
 		{
 			dataType="Marker";
@@ -10165,6 +10173,141 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item327
+		{
+			dataType="Marker";
+			position[]={25797.592,0,4895.5303};
+			name="PAteron";
+			text="Suit Guy:  Maredea";
+			type="mil_dot";
+			colorName="ColorBlue";
+			id=935;
+			atlOffset=185.97;
+		};
+		class Item328
+		{
+			dataType="Marker";
+			position[]={25825.074,0,3771.7129};
+			name="P2";
+			text="Ultimate Power: Eleros";
+			type="mil_dot";
+			colorName="ColorCIV";
+			id=937;
+			atlOffset=185.97;
+		};
+		class Item329
+		{
+			dataType="Marker";
+			position[]={25763.824,0,2583.355};
+			name="p3";
+			text="Knight";
+			type="mil_dot";
+			id=938;
+			atlOffset=185.97;
+		};
+		class Item330
+		{
+			dataType="Marker";
+			position[]={27221.168,0,2712.8804};
+			name="p4";
+			text="Ghosty";
+			type="mil_dot";
+			id=939;
+			atlOffset=185.97;
+		};
+		class Item331
+		{
+			dataType="Marker";
+			position[]={25800.273,0,1695.9156};
+			name="p5";
+			text="Ghost buster: ZARKOS!";
+			type="mil_dot";
+			colorName="ColorKhaki";
+			id=940;
+			atlOffset=185.97;
+		};
+		class Item332
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3662.8723,58.708496,10365.224};
+			};
+			id=942;
+			type="tfar_ModuleTaskForceRadioFrequencies";
+			atlOffset=38.734764;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="tfar_ModuleTaskForceRadioFrequencies_LrFreq";
+					expression="_this setVariable ['LrFreq',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[""77"",""78"",""79""]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="tfar_ModuleTaskForceRadioFrequencies_Units";
+					expression="_this setVariable ['Units',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="tfar_ModuleTaskForceRadioFrequencies_PrFreq";
+					expression="_this setVariable ['PrFreq',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[""141.1"",""141.2""]";
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item333
+		{
+			dataType="Marker";
+			position[]={4598.0449,0,28722.945};
+			name="TS";
+			text="Teamspeak: ts.spiralcrafters.com";
+			type="mil_marker";
+			id=943;
+			atlOffset=183.49001;
 		};
 	};
 	class Connections
