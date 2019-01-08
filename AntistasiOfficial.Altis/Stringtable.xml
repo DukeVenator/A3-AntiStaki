@@ -3,13 +3,13 @@
 	<Package name="MissionNames">
 		<Container name="MissionNames_0">
 			<Key ID="STR_MISSION_NAME_SQM">
-				<Original>Antistasi 1.8.3.1 blufor</Original>
+				<Original>Antistasi 1.8.4.1 blufor</Original>
 			</Key>
 			<Key ID="STR_MISSION_NAME_INITVAR_SQF">
-				<Original>v 1.8.3.1</Original>
+				<Original>v 1.8.4.1</Original>
 			</Key>
 			<Key ID="STR_MISSION_NAME_EXT">
-				<Original>Antistasi 1.8.3.1</Original>
+				<Original>Antistasi 1.8.4.1</Original>
 			</Key>
 		</Container>
 	</Package>
@@ -52,6 +52,11 @@
 			</Key>
 			<Key ID="STR_DES_AUTOSAVE">
 				<Original>Autosave every 60 min</Original>
+				<Russian>Автосохранение каждые 60 минут</Russian>
+				<Spanish>Autoguardar cada 60 min</Spanish>
+			</Key>
+			<Key ID="STR_DES_THIRD">
+				<Original>Enable Third person Restrictions</Original>
 				<Russian>Автосохранение каждые 60 минут</Russian>
 				<Spanish>Autoguardar cada 60 min</Spanish>
 			</Key>
