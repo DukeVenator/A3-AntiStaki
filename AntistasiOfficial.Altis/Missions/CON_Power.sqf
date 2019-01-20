@@ -36,8 +36,8 @@ if (not(_marcador in mrkAAF)) then {
 	sleep 10;
 	_tsk = ["CON",[side_blue,civilian],[[_tskDesc,_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],_tskTitle,_marcador],_posicion,"SUCCEEDED",5,true,true,"Target"] call BIS_fnc_setTask;
 	[0,200] remoteExec ["resourcesFIA",2];
-	[-5,5,_posicion] remoteExec ["AS_fnc_changeCitySupport",2];
-	[800] remoteExec ["AS_fnc_increaseAttackTimer",2];
+	[-5,0,_posicion] remoteExec ["AS_fnc_changeCitySupport",2];
+	[600] remoteExec ["AS_fnc_increaseAttackTimer",2];
 	{if (isPlayer _x) then {[10,_x] call playerScoreAdd}} forEach ([500,0,_posicion,"BLUFORSpawn"] call distanceUnits);
 	[10,Slowhand] call playerScoreAdd;
 	// BE module
