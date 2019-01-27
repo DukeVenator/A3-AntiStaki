@@ -57,8 +57,13 @@
 			</Key>
 			<Key ID="STR_DES_THIRD">
 				<Original>Enable Third person Restrictions</Original>
-				<Russian>Автосохранение каждые 60 минут</Russian>
-				<Spanish>Autoguardar cada 60 min</Spanish>
+				<Russian>Translate needed</Russian>
+				<Spanish>Translate needed</Spanish>
+			</Key>
+			<Key ID="STR_DES_HILLC">
+				<Original>Enable HillClimber</Original>
+				<Russian>Translate needed</Russian>
+				<Spanish>Translate needed</Spanish>
 			</Key>
 			<Key ID="STR_DES_LOADPROFILESAVE">
 				<Original>INIDIBI2: Load the game from standard profile.vars == Export from standard Antistasi save</Original>
