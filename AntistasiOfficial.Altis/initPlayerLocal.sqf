@@ -250,7 +250,7 @@ if !(isMultiplayer) then {
 [player] execVM "OrgPlayers\unitTraits.sqf";
 [player] spawn rankCheck;
 [player] spawn localSupport;
-
+[] execVM "Scripts\duke_uphillMovement.sqf";
 if ((['AS_third', 0] call BIS_fnc_getParamValue) == 1) then {[] execVM "Scripts\ThirdPerson.sqf";};
 
 //Sparker's WarStatistics and roadblock spawning script. Remove these lines if you don't need it:
