@@ -62,7 +62,8 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 				sleep 1;
 			};
 		};
-	}; //Enabled because players don't understand these mechanics
+	};
+//Disabled, those are added out from no-where, in future this can become a sort of upgrade
 
 /*Jam  feature disabled untill jam will have a function in AirControl patch
 	_antenna = [antenas,_markerPos] call BIS_fnc_nearestPosition;

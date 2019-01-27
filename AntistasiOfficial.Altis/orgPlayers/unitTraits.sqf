@@ -12,7 +12,7 @@ switch (_type) do {
 	case guer_sol_RFL:  {	player setVariable ["class", "rifleman"]; //Stef 31-08 added class variable to make easier class switch
 							player setUnitTrait ["audibleCoef",0.8];
 							player setUnitTrait ["loadCoef",1.2];
-							_text = "Rifleman role.\n\nRiflemen are more suitable to silent sneak but have less carryng capacity"};
+							_text = "Rifleman role.\n\nRiflemen are quieter but have less carryng capacity"};
 
 	case guer_sol_LAT: {	player setVariable ["class", "antitank"];
 							player setUnitTrait ["camouflageCoef",1.2];
@@ -22,7 +22,7 @@ switch (_type) do {
 	case guer_sol_AR: 	{	player setVariable ["class", "autorifleman"];
 							player setUnitTrait ["audibleCoef",1.2];
 							player setUnitTrait ["loadCoef",0.8];
-							_text = "Autorifleman role.\n\nAutoriflemen have a slight bonus on carry capacity, but make too much noise when they move"};
+							_text = "Autorifleman role.\n\nAutoriflemen have a slight bonus on carry capacity, but make alot more noise when they move"};
 
 	case guer_sol_ENG:  {	player setVariable ["class", "engineer"];
 							_text = "Engineer role.\n\nEngineers do not have any bonus or penalties, but have the ability to use Repair Kits for vehicle repair";};

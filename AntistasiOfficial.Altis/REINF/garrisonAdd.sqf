@@ -36,7 +36,7 @@ hint format ["Soldier recruited.%1",[_marcador] call AS_fnc_getGarrisonInfo];
 
 if (spawner getVariable _marcador) then
 	{
-	closeMarkersUpdating = 4;
+	closeMarkersUpdating = 1;
 	_forzado = false;
 	if (_marcador in forcedSpawn) then {forcedSpawn = forcedSpawn - [_marcador]; publicVariable "forcedSpawn"; _forzado = true};
 	[_marcador] remoteExec ["tempMoveMrk",2];

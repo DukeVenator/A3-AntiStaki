@@ -7,7 +7,7 @@ OnLoadMission = "Be a Resistance Leader - Be a Hero W.I.P";
 loadScreen = "pic.paa";
 
 overviewText = "Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.";
-overviewPicture = "pic.jpg";
+overviewPicture = "pic.paa";
 
 allowFunctionsLog = 1;
 enableDebugConsole = 1;
@@ -54,23 +54,23 @@ maxplayers=52;
 
 class CfgSounds
 {
-    class jammer_loop
-  {
-        name = "jammer_loop";
-        sound[] = {"\sound\jammer_Effect.ogg", db+2, 1};
-        titles[] = {1,""};
-    };
-    class power_down
-    {
-        name = "power_down";
-        sound[] = {"\sound\power_down.ogg", db+6, 1};
-        titles[] = {1,""};
-    };
     class fire
     {
         name="fire";
         sound[]={"Music\fire.ogg",db+12,1.0};
         titles[]={};
+    };
+    class jammer_loop
+    {
+        name = "jammer_loop";
+        sound[] = {"\sound\jammer_Effect.ogg", db+15, 1};
+        titles[] = {1,""};
+    };
+    class power_down
+    {
+      name = "power_down";
+      sound[] = {"\sound\power_down.ogg", db+15, 1};
+      titles[] = {1,""};
     };
 };
 class CfgIdentities
@@ -373,7 +373,15 @@ class Params {
         title = $STR_DES_AUTOSAVE;
         values[] = {0,1};
         texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 0;
+        default = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class AS_third {
+        title = $STR_DES_THIRD;
+        values[] = {0,1};
+        texts[] = {$STR_DES_OFF,$STR_DES_ON};
+        default = 1;
         typeName = "BOOL";
         force = 1;
     };

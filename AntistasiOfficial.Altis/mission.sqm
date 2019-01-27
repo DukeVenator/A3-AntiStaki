@@ -8,7 +8,7 @@ class EditorData
 	toggles=2;
 	class ItemIDProvider
 	{
-		nextID=944;
+		nextID=947;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=452;
+		nextID=468;
 	};
 	class Camera
 	{
-		pos[]={3678.2534,41.384926,10301.575};
-		dir[]={0,-0.70710677,0.70710683};
-		up[]={0,0.70710677,0.70710671};
-		aside[]={0.99999994,0,-0};
+		pos[]={3613.4392,49.088348,10273.571};
+		dir[]={0.38882104,-0.79123867,0.47200239};
+		up[]={0.50309128,0.61149466,0.61071801};
+		aside[]={0.77185071,2.0954758e-007,-0.63582867};
 	};
 };
 binarizationWanted=0;
@@ -49,7 +49,7 @@ addons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Structures_F_Argo_Military_Fortifications",
 	"A3_Modules_F_Curator_Curator",
-	"task_force_radio_items"
+	"acex_fortify"
 };
 class AddonsMetaData
 {
@@ -149,10 +149,10 @@ class AddonsMetaData
 		};
 		class Item13
 		{
-			className="task_force_radio_items";
-			name="task_force_radio_items";
-			author="[TF]Nkey";
-			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
+			className="acex_fortify";
+			name="acex_fortify";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -212,7 +212,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=334;
+		items=330;
 		class Item0
 		{
 			dataType="Marker";
@@ -10176,73 +10176,21 @@ class Mission
 		};
 		class Item327
 		{
-			dataType="Marker";
-			position[]={25797.592,0,4895.5303};
-			name="PAteron";
-			text="Suit Guy:  Maredea";
-			type="mil_dot";
-			colorName="ColorBlue";
-			id=935;
-			atlOffset=185.97;
-		};
-		class Item328
-		{
-			dataType="Marker";
-			position[]={25825.074,0,3771.7129};
-			name="P2";
-			text="Ultimate Power: Eleros";
-			type="mil_dot";
-			colorName="ColorCIV";
-			id=937;
-			atlOffset=185.97;
-		};
-		class Item329
-		{
-			dataType="Marker";
-			position[]={25763.824,0,2583.355};
-			name="p3";
-			text="Knight";
-			type="mil_dot";
-			id=938;
-			atlOffset=185.97;
-		};
-		class Item330
-		{
-			dataType="Marker";
-			position[]={27221.168,0,2712.8804};
-			name="p4";
-			text="Ghosty";
-			type="mil_dot";
-			id=939;
-			atlOffset=185.97;
-		};
-		class Item331
-		{
-			dataType="Marker";
-			position[]={25800.273,0,1695.9156};
-			name="p5";
-			text="Ghost buster: ZARKOS!";
-			type="mil_dot";
-			colorName="ColorKhaki";
-			id=940;
-			atlOffset=185.97;
-		};
-		class Item332
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3662.8723,58.708496,10365.224};
+				position[]={3625.4341,14.771377,10287.428};
 			};
-			id=942;
-			type="tfar_ModuleTaskForceRadioFrequencies";
-			atlOffset=38.734764;
+			name="FortifyX";
+			id=944;
+			type="acex_fortify_setupModule";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
 				{
-					property="tfar_ModuleTaskForceRadioFrequencies_LrFreq";
-					expression="_this setVariable ['LrFreq',_value,true];";
+					property="acex_fortify_setupModule_AddToolItem";
+					expression="_this setVariable ['AddToolItem',_value,true];";
 					class Value
 					{
 						class data
@@ -10251,17 +10199,17 @@ class Mission
 							{
 								type[]=
 								{
-									"STRING"
+									"BOOL"
 								};
 							};
-							value="[""77"",""78"",""79""]";
+							value=1;
 						};
 					};
 				};
 				class Attribute1
 				{
-					property="tfar_ModuleTaskForceRadioFrequencies_Units";
-					expression="_this setVariable ['Units',_value,true];";
+					property="acex_fortify_setupModule_Budget";
+					expression="_this setVariable ['Budget',_value,true];";
 					class Value
 					{
 						class data
@@ -10270,17 +10218,17 @@ class Mission
 							{
 								type[]=
 								{
-									"STRING"
+									"SCALAR"
 								};
 							};
-							value="1";
+							value=-1;
 						};
 					};
 				};
 				class Attribute2
 				{
-					property="tfar_ModuleTaskForceRadioFrequencies_PrFreq";
-					expression="_this setVariable ['PrFreq',_value,true];";
+					property="acex_fortify_setupModule_Side";
+					expression="_this setVariable ['Side',_value,true];";
 					class Value
 					{
 						class data
@@ -10289,25 +10237,215 @@ class Mission
 							{
 								type[]=
 								{
-									"STRING"
+									"SCALAR"
 								};
 							};
-							value="[""141.1"",""141.2""]";
+							value=1;
 						};
 					};
 				};
-				nAttributes=3;
+				class Attribute3
+				{
+					property="acex_fortify_setupModule_Preset";
+					expression="_this setVariable ['Preset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
-		class Item333
+		class Item328
 		{
-			dataType="Marker";
-			position[]={4598.0449,0,28722.945};
-			name="TS";
-			text="Teamspeak: ts.spiralcrafters.com";
-			type="mil_marker";
-			id=943;
-			atlOffset=183.49001;
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3629.47,14.701922,10289.887};
+			};
+			id=945;
+			type="acex_fortify_setupModule";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_fortify_setupModule_AddToolItem";
+					expression="_this setVariable ['AddToolItem',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_fortify_setupModule_Budget";
+					expression="_this setVariable ['Budget',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acex_fortify_setupModule_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acex_fortify_setupModule_Preset";
+					expression="_this setVariable ['Preset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item329
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3635.1941,14.653844,10284.171};
+			};
+			id=946;
+			type="acex_fortify_setupModule";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_fortify_setupModule_AddToolItem";
+					expression="_this setVariable ['AddToolItem',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_fortify_setupModule_Budget";
+					expression="_this setVariable ['Budget',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acex_fortify_setupModule_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acex_fortify_setupModule_Preset";
+					expression="_this setVariable ['Preset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 	class Connections

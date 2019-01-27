@@ -8,7 +8,7 @@ _posicion = getMarkerPos (_marcador);
 
 _aeropuertos = aeropuertos - mrkAAF + ["spawnNATO"];
 
-_threatEval = 6; //Stef i forced it to 7 untill i manage to check if vehDef and static guns are operative or not.
+_threatEval = 7; //Stef i forced it to 7 untill i manage to check if vehDef and static guns are operative or not.
 
 _origen = [_aeropuertos,_posicion] call BIS_fnc_nearestPosition;
 _orig = getMarkerPos _origen;
@@ -16,7 +16,7 @@ _orig = getMarkerPos _origen;
 _nombredest = [_marcador] call AS_fnc_localizar;
 _nombreorig = "the NATO Carrier";
 if (_origen!= "spawnNATO") then {_nombreorig = [_origen] call AS_fnc_localizar};
-_tsk = ["NATOCA",[side_blue,civilian],[["STR_TSK_DESC_ATTACK",_nombredest,_nombreorig, A3_Str_BLUE],["STR_TSK_ATTACK", A3_Str_BLUE],_marcador],_posicion,"CREATED",4,true,true,"Attack"] call BIS_fnc_setTask;
+_tsk = ["NATOCA",[side_blue,civilian],[["STR_TSK_DESC_ATTACK",_nombredest,_nombreorig, A3_Str_BLUE],["STR_TSK_ATTACK", A3_Str_BLUE],_marcador],_posicion,"CREATED",5,true,true,"Attack"] call BIS_fnc_setTask;
 misiones pushBackUnique _tsk; publicVariable "misiones";
 _soldados = [];
 _vehiculos = [];

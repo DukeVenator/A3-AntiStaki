@@ -14,7 +14,7 @@ if (typeof _jammer == "Land_DataTerminal_01_F") then //check if the object Zeus 
 		while {_jamDamage < 0.10} do
 		{
 			[_jamSource,["jammer_loop",25,1]] remoteExec ["say3D",0];
-			sleep 3;
+			sleep 6;
 		};
 		//this while loop checks the damage of the jammer every 3 seconds. apparently it can't be shot or blown up so we apply the damage manually in the shutdown script which ends the sound effects
 };

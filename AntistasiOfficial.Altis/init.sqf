@@ -39,8 +39,7 @@ caja call jn_fnc_arsenal_init;
 
 [] execVM "Scripts\fn_advancedTowingInit.sqf";
 [] execVM "Dialogs\welcome.sqf";
-[] execVM "Scripts\duke_uphillMovement.sqf";
-[] execVM "Scripts\duke_playerAddtoZeus.sqf";
+//[] execVM "Scripts\duke_playerAddtoZeus.sqf";
 
 if(isServer) then {
     _serverHasID = profileNameSpace getVariable ["SS_ServerID",nil];
@@ -90,6 +89,7 @@ if(isServer) then {
     distancias = [] spawn distancias3;
     resourcecheck = [] execVM "resourcecheck.sqf";
 };
-
+missionNamespace setVariable ["SA_ASL_HEAVY_LIFTING_ENABLED",true,true];// Fix for scripting problem
+ASL_HEAVY_LIFTING_MIN_LIFT_OVERRIDE = 2000; //Fixes for ASL lift problem
 //Check worldname on dedicated server: is it altis or Altis? Sparker.
 diag_log format ["Antistasi worldName: %1",worldName];

@@ -74,3 +74,5 @@ statistics= [] execVM "statistics.sqf";
 
 [player] execVM "OrgPlayers\unitTraits.sqf";
 [player] spawn rankCheck;
+if ((['AS_third', 0] call BIS_fnc_getParamValue) == 1) then {[] execVM "Scripts\ThirdPerson.sqf";};
+[] execVM "Scripts\duke_uphillMovement.sqf";

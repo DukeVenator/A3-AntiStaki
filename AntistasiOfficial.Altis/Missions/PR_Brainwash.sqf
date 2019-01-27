@@ -293,12 +293,12 @@ _minTimer: minimum number of seconds before players can get any reward
 _prestige: minimum additional city support for surpassing the minTimer
 */
 _minTimer = 600;
-_prestige = 10;
+_prestige = 0;
 if (_counter < _minTimer) then {
 	_break = true;
 }
 else {
-	_prestige = 30 + floor ((_counter - _minTimer) / 80);
+	_prestige = 10 + floor ((_counter - _minTimer) / 80);
 };
 
 // inform players about timer at the end of the mission
@@ -312,7 +312,7 @@ if (_break) then {
 // failure if you held out for less than 10 minutes
 if (_break) then {
 	_tsk = ["PR",[side_blue,civilian],[[_tskDesc_fail2,_targetName,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],_tskTitle,_targetMarker],_targetPosition,"FAILED",5,true,true,"Heal"] call BIS_fnc_setTask;
-	[5,-1,_targetMarker] remoteExec ["AS_fnc_changeCitySupport",2];
+	[5,-5,_targetMarker] remoteExec ["AS_fnc_changeCitySupport",2];
 	[-10,Slowhand] call playerScoreAdd;
 }
 else {
