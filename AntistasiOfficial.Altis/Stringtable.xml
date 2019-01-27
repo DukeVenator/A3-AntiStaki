@@ -3,13 +3,13 @@
 	<Package name="MissionNames">
 		<Container name="MissionNames_0">
 			<Key ID="STR_MISSION_NAME_SQM">
-				<Original>Antistasi 1.8.4.4 blufor</Original>
+				<Original>Antistasi 1.8.4.5 blufor</Original>
 			</Key>
 			<Key ID="STR_MISSION_NAME_INITVAR_SQF">
-				<Original>v 1.8.4.4 Fortifications</Original>
+				<Original>v 1.8.4.5 Fortifications</Original>
 			</Key>
 			<Key ID="STR_MISSION_NAME_EXT">
-				<Original>Antistasi 1.8.4.4</Original>
+				<Original>Antistasi 1.8.4.5 Test Patch 2</Original>
 			</Key>
 		</Container>
 	</Package>
@@ -61,6 +61,11 @@
 				<Spanish>Translate needed</Spanish>
 			</Key>
 			<Key ID="STR_DES_HILLC">
+				<Original>Enable HillClimber</Original>
+				<Russian>Translate needed</Russian>
+				<Spanish>Translate needed</Spanish>
+			</Key>
+			<Key ID="STR_DES_HLIFT">
 				<Original>Enable HillClimber</Original>
 				<Russian>Translate needed</Russian>
 				<Spanish>Translate needed</Spanish>

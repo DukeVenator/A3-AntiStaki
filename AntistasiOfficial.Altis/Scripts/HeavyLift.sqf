@@ -11,7 +11,7 @@
 
 	Example:
 	// initPlayerLocal.sqf
-	call Dukes_fnc_limitThirdPerson;
+	call Dukes_fnc_limitThirdPerson; 
 __________________________________________________________________*/
 TAG_fnc_handleSlingMass = {
 	params ["_chopper"];
