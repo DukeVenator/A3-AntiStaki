@@ -66,12 +66,12 @@ infList_crew = 		[sol_UN, sol_CREW, sol_CREW2, sol_CREW3, sol_CREW4, sol_DRV, so
 infList_pilots = 	[sol_HPIL, sol_HPIL2, sol_PIL];
 
 // Vehicles
-vehTrucks = 		["rhs_kamaz5350_open_vdv","rhs_kamaz5350_vdv","RHS_Ural_Open_VDV_01","RHS_Ural_VDV_01"]; // trucks that spawn at outposts, etc
+vehTrucks = 		["rhs_kamaz5350_open_vdv","rhs_kamaz5350_vdv","RHS_Ural_Open_VDV_01","RHS_Ural_VDV_01","rhs_zil131_flatbed_msv"]; // trucks that spawn at outposts, etc
 vehPatrol =			["rhs_tigr_m_vdv","RHS_Mi8mt_vvsc"]; // vehicles used for road patrols;
 if (activeGREF) then {vehPatrol = vehPatrol + ["rhsgref_BRDM2_HQ_vdv"];};
-vehAPC = 			["rhs_btr80_vdv"]; // APCs
-vehIFV = 			["rhs_bmp2d_vdv","rhs_bmp1p_vdv","rhs_bmd2m","rhs_bmd2k"]; // IFVs
-vehTank = 			["rhs_t72bb_tv","rhs_t72bd_tv","rhs_t90a_tv"]; // MBTs
+vehAPC = 			["rhs_btr80_vdv,rhs_prp3_msv"]; // APCs
+vehIFV = 			["rhs_bmp2d_vdv","rhs_bmp1p_vdv","rhs_bmd2m","rhs_bmd2k,rhs_bmp3_msv,rhs_bmp3_late_msv,rhs_bmp3m_msv","rhs_brm1k_msv"]; // IFVs
+vehTank = 			["rhs_t72bb_tv","rhs_t72bd_tv","rhs_t90a_tv","2S25"]; // MBTs
 vehSupply = 		["rhs_gaz66_ammo_vdv","RHS_Ural_Fuel_VDV_01","rhs_gaz66_repair_vdv","rhs_gaz66_ap2_vdv"]; // supply vehicles (ammo, fuel, med)
 vehAmmo = 			"rhs_gaz66_ammo_vdv"; // ammo truck, for special missions
 vehFuel = 			["RHS_Ural_Fuel_VDV_01"]; // fuel truck for missions
@@ -92,9 +92,9 @@ var_AAF_groundForces = var_AAF_groundForces arrayIntersect var_AAF_groundForces;
 
 // Airforce
 heli_unarmed = 		["RHS_Mi8mt_Cargo_vvsc","RHS_Mi8MTV3_FAB_vvsc","RHS_Mi8AMTSh_FAB_vvsc","rhs_ka60_c"]; // (un-)armed transport helicopters
-heli_armed = 		["RHS_Mi24V_FAB_vdv","RHS_Mi24V_UPK23_vdv"]; // // armed helicopters
+heli_armed = 		["RHS_Mi24V_FAB_vdv","RHS_Mi24V_UPK23_vdv","RHS_Ka52_vvs"]; // // armed helicopters
 heli_escort = 		"RHS_Mi8AMTSh_vvsc";
-planes = 			["RHS_Su25SM_vvsc"]; // attack planes
+planes = 			["RHS_Su25SM_vvsc","rhs_T50_vvs_blueonblue"]; // attack planes
 heli_default = 		"RHS_Mi8mt_vvsc";
 heli_transport = 	"RHS_Mi8mt_vvsc";
 indUAV_large = 		"I_UAV_02_F"; // large UAV, unarmed
@@ -551,7 +551,7 @@ side_green = 	independent;
 lrRadio = "tf_anprc155_coyote";
 
 // Define the civilian helicopter that allows you to go undercover
-civHeli = "RHS_Mi8amt_civilian";
+civHeli = "C_IDAP_Heli_Transport_02_F";
 
 // Define the ammo crate to be spawned at camps
 campCrate = "Box_NATO_Equip_F";

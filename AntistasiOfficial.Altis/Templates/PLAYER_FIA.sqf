@@ -10,7 +10,7 @@ guer_veh_truck = "B_G_Van_01_transport_F"; // default transport for squads
 guer_veh_engineer = "B_G_Offroad_01_repair_F";
 guer_veh_technical = "B_G_Offroad_01_armed_F";
 guer_veh_quad = "B_G_Quadbike_01_F"; // default transport for snipers
-guer_veh_offroad = "B_G_Offroad_01_F"; // default transport for teams
+guer_veh_offroad = "I_C_Offroad_02_LMG_F"; // default transport for teams
 guer_veh_dinghy = "C_Boat_Civil_01_F";
 
 guer_sol_AA = "B_G_Soldier_lite_F"; // AA trooper in player groups

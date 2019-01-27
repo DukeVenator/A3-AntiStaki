@@ -14,10 +14,10 @@ _compromised = player getVariable ["compromised",dateToNumber date];
 	Add vehicles to the Array above to allow them to be used as Undercover.
 	Ideal for hand-placed objects that you don't want spawning as traffic.
 	Vehicles you want added as traffic should be added to CIV_vehicles.
-	Duke's Notes: This also applies to other types of vehicles such as helicopters 
+	Duke's Notes: This also applies to other types of vehicles such as helicopters
 */
 _civVehicles = CIV_vehicles + [civHeli] + [
-		"C_Rubberboat",// Civ. Zodiac
+	"C_Rubberboat",// Civ. Zodiac
 		"C_Boat_Civil_01_F",// Speedboat
 		"C_Boat_Civil_01_rescue_F",// Rescue Speedboat
 		"C_Boat_Civil_01_police_F",// Police Speedboat
