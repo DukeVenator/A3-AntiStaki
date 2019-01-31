@@ -39,6 +39,7 @@ caja call jn_fnc_arsenal_init;
 
 [] execVM "Scripts\fn_advancedTowingInit.sqf";
 [] execVM "Dialogs\welcome.sqf";
+[] execVM "Scripts\Maredea\Maredea.sqf"
 //[] execVM "Scripts\duke_playerAddtoZeus.sqf";
 
 if(isServer) then {
