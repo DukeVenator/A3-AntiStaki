@@ -21,7 +21,7 @@ waitUntil
 		(
     	2*count (allUnits select {(side _x == side_blue) AND (_x distance _markerPos <= 100) and (lifeState _x != "INCAPACITATED") and !(fleeing _x)})
    		<
-    	count (allUnits select {((side _x == side_green) OR (side _x == side_red)) AND (_x distance _markerPos <= 100) and (lifeState _x != "INCAPACITATED")}
+    	count (allUnits select {((side _x == side_green) OR (side _x == side_red)) AND (_x distance _markerPos <= 100) and (lifeState _x != "INCAPACITATED")})
     )
 	)
 };
@@ -30,7 +30,7 @@ if ((_marker in mrkAAF) or (
     	2*count (allUnits select {(side _x == side_blue) AND (_x distance _markerPos <= 100) and (lifeState _x != "INCAPACITATED") and !(fleeing _x)})
    		<
     	count (allUnits select {((side _x == side_green) OR (side _x == side_red)) AND (_x distance _markerPos <= 100) and (lifeState _x != "INCAPACITATED")}
-    )) then {hint "WIN"} else {hint "LOSS"};
+    ))) then {hint "WIN"} else {hint "LOSS"};
 
 
 
@@ -180,7 +180,7 @@ if (_vehicleType in heli_armed + opAir + opCASFW) exitWith {
 			if (random 8 < 1) then { //maybe add spawn here
 				if(player in crew _vehicle) then {
 					_targetpos = position (_vehicle);
-					_airportpos = getmakerpos ["spawnCSAT"];
+					_airportpos = getmarkerpos ["spawnCSAT"];
 					_depart = [_airportpos select 0, _airportpos select 1,300];
 					_jet = [_depart, 0,dogfight, side_green] call bis_fnc_spawnvehicle;
 					_pilot = driver (_jet select 0);
@@ -189,9 +189,9 @@ if (_vehicleType in heli_armed + opAir + opCASFW) exitWith {
 
 				};
 			};
-		};
-	};
-
+		}
+	];
+};
 _vehicle = vehicle player;
 _eh = _vehicle addEventHandler ["Fired", {
     	if(player in crew _vehicle) then {

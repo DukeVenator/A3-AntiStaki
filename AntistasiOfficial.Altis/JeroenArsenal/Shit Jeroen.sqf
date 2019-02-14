@@ -161,7 +161,7 @@ vehicle player addEventHandler ["Fired", {
 		};
 	};
 
-}]
+}];
 
 
 player allowDamage false;
@@ -174,7 +174,7 @@ vehicle player addEventHandler ["Fired", {
 		_p setVelocity (velocity _this);
 	};
 
-}]
+}];
 
 
 

@@ -106,35 +106,35 @@ _allGroups pushBack _group;
 	};
 	*/
 
-	//Initialise NATO units
-	_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
-	_group = [_markerPos, side_blue, _groupType] call BIS_Fnc_spawnGroup;
-	sleep 1;
-	[leader _group, _marker, "SAFE", "ORIGINAL","SPAWNED", "NOVEH2", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
-	_allGroups pushBack _group;
+//Initialise NATO units
+_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
+_group = [_markerPos, side_blue, _groupType] call BIS_Fnc_spawnGroup;
+sleep 1;
+[leader _group, _marker, "SAFE", "ORIGINAL","SPAWNED", "NOVEH2", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
+_allGroups pushBack _group;
 
-	_counter = 0;
-	while {(spawner getVariable _marker) AND (_counter < _maxVehicles)} do {
-		if (diag_fps > minimoFPS) then {
-			while {true} do {
-				_spawnPos = [_markerPos, random _size,random 360] call BIS_fnc_relPos;
-				if (!surfaceIsWater _spawnPos) exitWith {};
-			};
-
-			_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
-			_group = [_spawnPos,side_blue, _groupType] call BIS_Fnc_spawnGroup;
-			sleep 1;
-			if (_counter == 0) then {
-				[leader _group, _marker, "SAFE","SPAWNED","FORTIFY","NOVEH","NOFOLLOW"] execVM "scripts\UPSMON.sqf";
-			} else {
-				[leader _group, _marker, "SAFE","SPAWNED", "RANDOM","NOVEH", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
-			};
-			_allGroups pushBack _group;
+_counter = 0;
+while {(spawner getVariable _marker) AND (_counter < _maxVehicles)} do {
+	if (diag_fps > minimoFPS) then {
+		while {true} do {
+			_spawnPos = [_markerPos, random _size,random 360] call BIS_fnc_relPos;
+			if (!surfaceIsWater _spawnPos) exitWith {};
 		};
 
-		_counter = _counter + 1;
+		_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
+		_group = [_spawnPos,side_blue, _groupType] call BIS_Fnc_spawnGroup;
+		sleep 1;
+		if (_counter == 0) then {
+			[leader _group, _marker, "SAFE","SPAWNED","FORTIFY","NOVEH","NOFOLLOW"] execVM "scripts\UPSMON.sqf";
+		} else {
+			[leader _group, _marker, "SAFE","SPAWNED", "RANDOM","NOVEH", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
+		};
+		_allGroups pushBack _group;
 	};
+
+	_counter = _counter + 1;
 };
+
 
 //Create groups for FIA garrison
 	_gunnerGroup = createGroup side_blue;
