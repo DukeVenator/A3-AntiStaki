@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\..\Save\script_component.hpp"
 if (!isServer) exitWith {};
 if (flag_savingServer) exitWith {"Server data save is still in progress..." remoteExecCall ["hint",Slowhand]};
 LOG("START fn_saveGame");

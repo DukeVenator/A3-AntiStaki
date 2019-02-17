@@ -8,7 +8,7 @@
 */
 #define DEBUG_SYNCHRONOUS
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\..\Save\script_component.hpp"
 if(!isserver)exitWith{};
 
 usingIniDb = !isnil "OO_INIDBI";
@@ -417,7 +417,7 @@ fn_setData = {
 			//Redundant, same code done for all options, propably add some bool to avoid double execution??
 			//Most likely getting even worse with supply levels ...
 			//I would recommend to redo this part, if I got some time, I will do this - wurzel
-			
+
 			if(_varname == 'supportOPFOR') exitWith {
 				for "_i" from 0 to (count ciudades) - 1 do {
 					_ciudad = ciudades select _i;
@@ -444,7 +444,7 @@ fn_setData = {
 					server setVariable [_ciudad,_datos,true];
 				};
 			};
-			
+
 			if(_varName == 'supplyLevels') exitWith
 			{
 				for "_i" from 0 to (count ciudades) - 1 do {
@@ -459,7 +459,7 @@ fn_setData = {
 					server setVariable [_ciudad,_datos,true];
 				};
 			};
-			
+
 			if(_varname == 'idleBases') exitWith {
 				{
 					server setVariable [(_x select 0),(_x select 1),true];
