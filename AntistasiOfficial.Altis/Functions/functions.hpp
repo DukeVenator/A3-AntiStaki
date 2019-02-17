@@ -1,4 +1,3 @@
-
 class AS {
 	class init {
 		class init_hq {};
@@ -143,7 +142,6 @@ class AS {
 		class weaponReplacement {};
 		class weaponsCheck {};
 	};
-
     class headless {
         class getNextWorker {};
         class initWorker {};
@@ -151,7 +149,6 @@ class AS {
         class registerWorker {};
         class unregisterWorker {};
     };
-
 	class QRF {
 		class QRF_airCavalry {};
 		class QRF_approachTarget {};

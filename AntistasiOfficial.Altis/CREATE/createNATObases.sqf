@@ -107,6 +107,7 @@ _allGroups pushBack _group;
 	*/
 
 //Initialise NATO units
+_maxVehicles = 1 max (round ((_size/30)*_support));
 _groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
 _group = [_markerPos, side_blue, _groupType] call BIS_Fnc_spawnGroup;
 sleep 1;

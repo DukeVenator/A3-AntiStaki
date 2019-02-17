@@ -64,6 +64,7 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 	};
 	*/
 	//NATO patrols
+	_maxVehicles = round ((_size/100)*_support);
 	_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
 	_group = [_markerPos, side_blue, _groupType] call BIS_Fnc_spawnGroup;
 	sleep 1;
