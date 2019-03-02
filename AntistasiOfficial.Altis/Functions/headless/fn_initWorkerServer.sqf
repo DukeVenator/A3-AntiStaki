@@ -12,7 +12,7 @@
  */
 #define DEBUG_SYNCHRONOUS
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 workerArray = [2];
 

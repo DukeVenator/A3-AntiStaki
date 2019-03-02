@@ -1,4 +1,4 @@
-#include "..\defines\general.hpp"
+#include "..\..\UI\defines\general.hpp"
 
 params [["_minIDC", 1510], ["_maxIDC", 1600]];
 private ["_display"];

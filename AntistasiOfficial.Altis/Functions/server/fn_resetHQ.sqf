@@ -1,6 +1,6 @@
 //#define DEBUG_SYNCHRONOUS
 //#define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 if !(isServer) exitWith {};
 LOG("START AS_fnc_resetHQ");
 params [["_position",static_defPosHQ,[[]]]];

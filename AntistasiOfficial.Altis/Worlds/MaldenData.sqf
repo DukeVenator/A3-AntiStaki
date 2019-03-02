@@ -14,7 +14,7 @@ controles = ["control_1","control_2","control_3"]; // roadblocks
 colinas = []; // mountaintops
 colinasAA = []; // mountaintops for special purposes (compositions, etc)
 artyEmplacements = ["artillery_1","artillery_2","artillery_3"]; // artillery encampments
-seaMarkers = ["seaPatrol_1","seaPatrol_2","seaPatrol_3","seaPatrol_4","seaPatrol_5","seaPatrol_6","seaPatrol_7","seaPatrol_8","seaPatrol_9","seaPatrol_10","seaPatrol_11","seaPatrol_12","seaPatrol_13","seaPatrol_14",]; // naval patrol zones
+seaMarkers = ["seaPatrol_1","seaPatrol_2","seaPatrol_3","seaPatrol_4","seaPatrol_5","seaPatrol_6","seaPatrol_7","seaPatrol_8","seaPatrol_9","seaPatrol_10","seaPatrol_11","seaPatrol_12","seaPatrol_13","seaPatrol_14"]; // naval patrol zones
 
 posAntenas = [[7001.08,10034.1,0],[7057.09,9932.42,0],[9635.78,3309.5,0],[11320,4122.09,0]];
 
