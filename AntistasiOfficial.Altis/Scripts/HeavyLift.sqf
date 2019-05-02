@@ -1,7 +1,7 @@
 /*
  Function: Dukes_fnc_HeavyLift
  Author: Duke with Grumpy Old Man helping fix the array problem
- Limits third person use to vehicles only.
+This reduces mass depending on the array when you hook a vehicle
 
  Arguments(s):
  None
