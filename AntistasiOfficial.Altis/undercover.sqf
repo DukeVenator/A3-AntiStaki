@@ -100,7 +100,7 @@ call {
     	_revealdist = 100;
     	if (_base in puestos) then {_revealdist = 60} else {_revealdist = 300};
     	if (player distance getMarkerPos _base < _revealdist) exitWith {_reason = localize "STR_HINTS_UND_FAC_GRND"};
-    }
+    };
 
 	// You are wearing compromising gear
 	call {
@@ -149,7 +149,7 @@ call {
 
 if (_reason != "") exitWith {
 	if (_spotted) then {
-		_player setVariable ["compromised",(dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 30])];
+		player setVariable ["compromised",(dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 30])];
 		_reason = format ["%1\n\n%2", _reason, localize "STR_HINTS_UND_CMP_REPWAN"];
 	};
 

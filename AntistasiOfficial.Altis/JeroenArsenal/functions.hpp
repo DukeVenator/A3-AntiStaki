@@ -1,4 +1,3 @@
-
 class JN {
 	class JNA {
 		file = "JeroenArsenal\JNA";
@@ -34,7 +33,6 @@ class JN {
 		class garage_garageVehicle {};
 		class garage_canGarageVehicle {};
 	};
-
 	class JNL {
 		file = "JeroenArsenal\JNL";
 		class logistics_init {};
@@ -43,7 +41,6 @@ class JN {
 		class logistics_addAction {};
 		class logistics_removeAction {};
 	};
-
 	class JNL_Actions {
 		file = "JeroenArsenal\JNL\Actions";
 		class logistics_addActionGetInWeapon {};
@@ -55,7 +52,6 @@ class JN {
 		class logistics_removeActionUnload {};
 		class logistics_removeEventGetOutWeapon {};
 	};
-
 	class JNL_Functions {
 		file = "JeroenArsenal\JNL\Functions";
 		class logistics_canLoad {};

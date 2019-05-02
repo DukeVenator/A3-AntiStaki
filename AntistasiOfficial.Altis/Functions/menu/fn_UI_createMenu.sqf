@@ -1,7 +1,7 @@
-#include "..\defines\general.hpp"
-#include "..\defines\menu_player.hpp"
-#include "..\defines\menu_commander.hpp"
-#include "..\defines\menu_admin.hpp"
+#include "..\..\UI\defines\general.hpp"
+#include "..\..\UI\defines\menu_player.hpp"
+#include "..\..\UI\defines\menu_commander.hpp"
+#include "..\..\UI\defines\menu_admin.hpp"
 
 disableSerialization;
 params ["_menu", "_idc"];
@@ -156,4 +156,3 @@ call {
 		[ACT_BTNS_M4, [STR_GO_GAR, MAINT_PET, MAINT_MOV, MAINT_RES], MAINT_TEXTS, MAINT_TTS] call _fnc_setup;
 	};
 };
-

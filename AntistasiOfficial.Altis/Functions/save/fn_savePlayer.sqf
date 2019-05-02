@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\..\Save\script_component.hpp"
 params[
 	["_player",objNull,[objNull]],
 	["_uid","",[""]],
