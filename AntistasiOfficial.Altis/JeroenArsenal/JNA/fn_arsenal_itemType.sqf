@@ -60,6 +60,16 @@ _weaponTypeSpecific = _weaponType select 1;
 //workaround for ACE bugs related to bis_fnc_itemType by Barbolani from WotP
 if (activeACE) then {
 	if (_weaponTypeSpecific == "AccessoryBipod") then {
+		if (_item in aceItemsFix) then {_weaponTypeSpecific = "FirstAidKit"};
+        if (activeACEMedical) then {
+            if (_item in aceAdvMedItems) then {_weaponTypeSpecific = "FirstAidKit"};
+        };
+
+private ["_weaponTypeSpecific"];
+_weaponTypeSpecific = _weaponType select 1;
+//workaround for ACE bugs related to bis_fnc_itemType by Barbolani from WotP
+if (activeACE) then {
+	if (_weaponTypeSpecific == "AccessoryBipod") then {
 		if (_item in aceItems) then {_weaponTypeSpecific = "FirstAidKit"};
         if (activeACEMedical) then {
             if (_item in aceAdvMedItems) then {_weaponTypeSpecific = "FirstAidKit"};
