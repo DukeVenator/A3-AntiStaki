@@ -374,23 +374,7 @@ class Params {
         title = $STR_DES_THIRD;
         values[] = {0,1};
         texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 1;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class AS_hillc {
-        title = $STR_DES_HILLC;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 1;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class AS_hlift {
-        title = $STR_DES_HLIFT;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 1;
+        default = 0;
         typeName = "BOOL";
         force = 1;
     };
