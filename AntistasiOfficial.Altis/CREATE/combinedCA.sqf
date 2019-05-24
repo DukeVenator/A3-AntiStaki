@@ -58,8 +58,8 @@ if !(_forceAirport == "") then {
 
 if (_involveCSAT) then {
 	_resourcesAAF = server getVariable ["resourcesAAF",0];
-	if (_resourcesAAF > 30000) then {
-		server setVariable ["resourcesAAF",_resourcesAAF - 30000,true];
+	if (_resourcesAAF > 20000) then {
+		server setVariable ["resourcesAAF",_resourcesAAF - 20000,true];
 		[5,0] remoteExec ["prestige",2];
 	} else {
 		[5,0] remoteExec ["prestige",2]
@@ -369,9 +369,9 @@ if !(_marker in mrkAAF) then {
 	};
 };
 
-[1600] remoteExec ["AS_fnc_increaseAttackTimer",2];
+[2700] remoteExec ["AS_fnc_increaseAttackTimer",2];
 if (cuentaCA < 0) then {
-	cuentaCA = 1200;
+	cuentaCA = 600;
 };
 
 sleep 30;

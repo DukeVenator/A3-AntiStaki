@@ -1067,6 +1067,16 @@ if (activeACE) then {
 		"ACE_SpraypaintBlue"
 	];
 
+	aceItemsFix = [
+	"ACE_bodyBag",
+	"ACE_Fortify",
+	"ACE_Banana",
+	"ACE_Flashlight_XL50",
+	"ACE_IR_Strobe_Item",
+	"ACE_SpraypaintRed",
+	"ACE_SpraypaintBlue"
+	];
+
 	aceAdvMedItems = [
 		"ACE_fieldDressing",
 		"ACE_bloodIV_500",
