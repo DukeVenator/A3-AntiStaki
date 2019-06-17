@@ -24,7 +24,7 @@ _NATOSupp = _this select 1;
 			_crate addWeaponCargoGlobal 		[selectrandom bluGL			,	1	];
 			_crate addMagazineCargoGlobal 		[selectrandom bluRifleAmmo	,	5	];
 
-			//										Medical
+			/*										Medical
 			if !(activeACEMedical) then{
 				_crate addItemCargoGlobal		["FirstAidKit"				,	25	];
 				_crate addItemCargoGlobal 		["Medikit"					,	1	];
@@ -34,7 +34,7 @@ _NATOSupp = _this select 1;
 				_crate addItemCargoGlobal		["ACE_morphine"				,	25	];
 				_crate addItemCargoGlobal		["ACE_fieldDressing"		,	25	];
 				_crate addItemCargoGlobal		["ACE_bloodIV"				,	40	];
-				};
+				}; */
 			//										Generic
 
 			_crate addItemCargoGlobal 			["ToolKit"					,	1	];
