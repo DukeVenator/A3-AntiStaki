@@ -164,7 +164,6 @@
 	bluAttachments = [
 		"acc_flashlight", 			//anpeq with laser + flashlight
 		"bipod_01_F_snd",			//Bipod
-		"muzzle_snds_L",			//Higer tier only
 		"acc_flashlight_pistol",	//pistol flashlight
 		"optic_MRD"					//pistol optic
 	];
@@ -172,6 +171,13 @@
 	bluSuppressor = [
 	"muzzle_snds_acp",
 	"muzzle_snds_L"
+	"muzzle_snds_M"
+	"muzzle_snds_B"
+	"muzzle_snds_H"
+	"muzzle_snds_H_MG"
+	"muzzle_snds_338_sand"
+	"muzzle_snds_338_green"
+	"muzzle_snds_338_black"
 	];
 
 	blunvg = [

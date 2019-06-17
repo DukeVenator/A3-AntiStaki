@@ -162,7 +162,17 @@
 
 	bluAttachments = [
 		"rhsusf_acc_anpeq15_light", //anpeq with laser + flashlight
-		"rhsusf_acc_nt4_black"		//Higer tier only
+	];
+
+	bluSuppressor = [
+		"rhsusf_acc_rotex5_grey"
+		"rhsusf_acc_rotex5_tan"
+		"rhsusf_acc_muzzleFlash_Sf"
+		"rhsusf_acc_nt4_black"
+		"rhsusf_acc_nt4_tan"
+		"rhsusf_acc_SF3P556"
+		"rhsusf_acc_SFMB556"
+		"rhsusf_acc_SR25S"
 	];
 
 	blunvg = [

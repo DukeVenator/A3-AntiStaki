@@ -166,6 +166,10 @@ bluAttachments = [
 	"rhs_acc_tgpa"
 ];
 
+bluSuppressor = [
+
+];
+
 bluATMissile = [
 	"rhs_rpg7_PG7V_mag",
 	"rhs_rpg7_PG7VL_mag",

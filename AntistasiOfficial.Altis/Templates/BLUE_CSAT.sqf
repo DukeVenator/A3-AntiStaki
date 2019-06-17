@@ -170,6 +170,10 @@ bluAttachments = [
 	"muzzle_snds_B_snd_F"
 ];
 
+bluSuppressor = [
+
+];
+
 bluATMissile = [
 	"NLAW_F",
 	"Titan_AT",
