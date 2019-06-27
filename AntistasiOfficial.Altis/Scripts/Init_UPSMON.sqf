@@ -25,8 +25,8 @@ UPSMON_knowsAboutEnemy = 1.5; // 5
 //////////////////////// MODULES ////////////////////////////////////////////
 //Enable it to send reinforcements, better done it in a trigger inside your mission.
 UPSMON_reinforcement = false; // ToDo Set to true if UPSMON reinf is going ot be used
-UPSMON_CIV_Total = 0; //by Barbolani to avoid rpt flood.
-UPSMON_UNKNOWN_Total = 0; //by Barbolani to avoid rpt flood.
+UPSMON_CIV_Total = 0;
+UPSMON_UNKNOWN_Total = 0;
 //Artillery support, better control if set in trigger
 UPSMON_ARTILLERY_EAST_FIRE = true; //set to true for doing east to fire //ToDo verify if needed
 UPSMON_ARTILLERY_WEST_FIRE = true; //set to true for doing west to fire

@@ -49,19 +49,19 @@ if (_tipo == "rem") then
 					{
 					if (typeOf _x in guer_soldierArray) then
 						{
-						if (typeOf _x == guer_sol_UN) then {_coste = _coste - ([guer_stat_mortar] call vehiclePrice)};
+						if (typeOf _x == guer_sol_HMG) then {_coste = _coste - ([guer_stat_MGH] call vehiclePrice)};
 						_hr = _hr - 1;
 						_coste = _coste - (server getVariable (typeOf _x));
 						};
 					};
-				if (typeOf (vehicle _x) == guer_stat_mortar) then {deleteVehicle vehicle _x};
+				if (typeOf (vehicle _x) == guer_stat_MGH) then {deleteVehicle vehicle _x};
 				deleteVehicle _x;
 				};
 			} forEach allUnits;
 			};
 		};
 	{
-	if (_x == guer_sol_UN) then {_coste = _coste + ([guer_stat_mortar] call vehiclePrice)};
+	if (_x == guer_sol_HMG) then {_coste = _coste + ([guer_stat_MGH] call vehiclePrice)};
 	_hr = _hr + 1;
 	_coste = _coste + (server getVariable _x);
 	} forEach _garrison;
@@ -98,7 +98,7 @@ else
 		_ChildControl = _display displayCtrl 107;
 		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable guer_sol_SL];
 		_ChildControl = _display displayCtrl 108;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",(server getVariable guer_sol_UN) + ([guer_stat_mortar] call vehiclePrice)];
+		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",(server getVariable guer_sol_HMG) + ([guer_stat_MGH] call vehiclePrice)];
 		_ChildControl = _display displayCtrl 109;
 		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable guer_sol_GL];
 		_ChildControl = _display displayCtrl 110;

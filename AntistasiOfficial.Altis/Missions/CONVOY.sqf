@@ -395,7 +395,7 @@ if (_convoyType == "HVT") then {
 		_tskOutcome = "SUCCEEDED";
 		[10,0] remoteExec ["prestige",2];
 		[0,5,_posDestination] remoteExec ["AS_fnc_changeCitySupport",2];
-		[1200] remoteExec ["AS_fnc_increaseAttackTimer",2];
+		[1800] remoteExec ["AS_fnc_increaseAttackTimer",2];
 		{if (isPlayer _x) then {[10,_x] call playerScoreAdd}} forEach ([500,0,_hvt,"BLUFORSpawn"] call distanceUnits);
 		[5,Slowhand] call playerScoreAdd;
 		[position _hvt] spawn patrolCA;

@@ -117,7 +117,7 @@ class garrison_recruit 			{
 
 	BTN_R1(107, $STR_D_REC_SQLEAD, "", "[guer_sol_SL] call garrisonAdd");
 	BTN_R2(109, $STR_D_REC_GRENA, "", "[guer_sol_GL] call garrisonAdd");
-	BTN_R3(108, $STR_D_REC_MORTAR, "", "[guer_sol_UN] call garrisonAdd");
+	BTN_R3(108, $STR_D_REC_HMG, "", "[guer_sol_HMG] call garrisonAdd");
 	BTN_R4(111, $STR_D_REC_AT, "", "[guer_sol_LAT] call garrisonAdd");
 
 	};
@@ -266,21 +266,26 @@ class buy_vehicle			{
 
 	class controls {
 
-	AS_BOX_D(BOX_H_10);
-	AS_FRAME_D(FRAME_H_10, $STR_D_PUR_MIV);
+	AS_BOX_D(BOX_H_12);
+	AS_FRAME_D(FRAME_H_12, $STR_D_PUR_MIV);
 	BTN_BACK("closeDialog 0; createDialog ""vehicle_option"";");
 
-	BTN_L1(104, $STR_D_BUY_LVEH, "", "closedialog 0; [vfs select 3] call addFIAveh");
-	BTN_L2(105, $STR_D_BUY_OR_UAZ, "", "closedialog 0; [vfs select 4] call addFIAveh");
-	BTN_L3(106, $STR_D_BUY_TRUCK, "", "closedialog 0; [vfs select 5] call addFIAveh");
-	BTN_L4(110, $STR_D_BUY_ST_AT, "", "closedialog 0; [vfs select 9] call addFIAveh");
+	BTN_L1(104, $STR_D_BUY_LVEH, "", "closedialog 0; [vfs select 4] call addFIAveh");
+	BTN_L2(105, $STR_D_BUY_OR_UAZ, "", "closedialog 0; [vfs select 5] call addFIAveh");
+	BTN_L3(106, $STR_D_BUY_TRUCK, "", "closedialog 0; [vfs select 6] call addFIAveh");
+	BTN_L4(110, $STR_D_BUY_ST_AT, "", "closedialog 0; [vfs select 10] call addFIAveh");
+	BTN_L5(114, $STR_D_BUY_ARM_AT, "", "closedialog 0; [vfs select 14] call addFIAveh");
 
 
-	BTN_R1(107, $STR_D_BUY_ARM_OR, "", "closedialog 0; [vfs select 6] call addFIAveh");
-	BTN_R2(109, $STR_D_BUY_MOR, "", "closedialog 0; [vfs select 8] call addFIAveh");
-	BTN_R3(108, $STR_D_BUY_MG, "", "closedialog 0; [vfs select 7] call addFIAveh");
-	BTN_R4(111, $STR_D_BUY_ST_AA, "", "closedialog 0; [vfs select 10] call addFIAveh");
 
+
+	BTN_R1(107, $STR_D_BUY_ARM_OR, "", "closedialog 0; [vfs select 7] call addFIAveh");
+	BTN_R2(109, $STR_D_BUY_MOR, "", "closedialog 0; [vfs select 9] call addFIAveh");
+	BTN_R3(108, $STR_D_BUY_MG, "", "closedialog 0; [vfs select 8] call addFIAveh");
+	BTN_R4(111, $STR_D_BUY_ST_AA, "", "closedialog 0; [vfs select 11] call addFIAveh");
+	BTN_R5(113, $STR_D_BUY_ST_AA_ZU_23, "", "closedialog 0; [vfs select 13] call addFIAveh");
+	
+	
 	};
 };
 
@@ -294,10 +299,10 @@ class civ_vehicle 			{
 	AS_FRAME_D(FRAME_H_4, $STR_D_BUY_CIV_VH);
 	BTN_BACK("closeDialog 0; createDialog ""vehicle_option"";");
 
-	BTN_L1(104, $STR_D_OFFR, "", "closeDialog 0; [vfs select 0] call addFIAveh;");
-	BTN_R1(105, $STR_D_BUY_TRUCK, "", "closeDialog 0; [vfs select 1] call addFIAveh;");
-	BTN_L2(106, $STR_D_HELI, "", "closeDialog 0; [vfs select 2] call addFIAveh;");
-	BTN_R2(107, $STR_D_BUY_QUA, "", "closedialog 0; [vfs select 11] call addFIAveh");
+	BTN_L1(200, $STR_D_OFFR, "", "closeDialog 0; [vfs select 0] call addFIAveh;");
+	BTN_R1(201, $STR_D_BUY_TRUCK, "", "closeDialog 0; [vfs select 1] call addFIAveh;");
+	BTN_L2(202, $STR_D_HELI, "", "closeDialog 0; [vfs select 2] call addFIAveh;");
+	BTN_R2(203, $STR_D_BUY_QUA, "", "closedialog 0; [vfs select 3] call addFIAveh");
 
 	};
 };

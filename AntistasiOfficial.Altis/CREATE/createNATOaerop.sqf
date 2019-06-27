@@ -19,9 +19,9 @@ _support = (server getVariable "prestigeNATO")/100;
 _buildings = nearestObjects [_markerPos, listMilBld, _size*1.5];
 _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 
-//Duke enabled Garrison cause stef can suck it
+/* Stef Disable NATO Garrison: it spawn too many units and it's generally too easy to capture bases
 //NATO Garrison
-/*	//Aircraft
+	//Aircraft
 		if (count _buildings > 1) then {
 			_pos1 = getPos (_buildings select 0);
 			_pos2 = getPos (_buildings select 1);
@@ -62,9 +62,8 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 
 		_counter = _counter + 1;
 	};
-	*/
+
 	//NATO patrols
-	_maxVehicles = round ((_size/100)*_support);
 	_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
 	_group = [_markerPos, side_blue, _groupType] call BIS_Fnc_spawnGroup;
 	sleep 1;
@@ -138,6 +137,7 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 				};
 			};
 		};
+*/
 
 //Create groups for FIA garrison
 	_gunnerGroup = createGroup side_blue;
@@ -152,10 +152,10 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 		_unitType = _garrison select _counter;
 		call {
 			//Mortar
-			if (_unitType == guer_sol_UN) exitWith {
+			if (_unitType == guer_sol_HMG) exitWith {
 				_unit = _gunnerGroup createUnit [_unitType, _markerPos, [], 0, "NONE"];
 				_spawnPos = [_markerPos] call mortarPos;
-				_vehicle = guer_stat_mortar createVehicle _spawnPos;
+				_vehicle = guer_stat_MGH createVehicle _spawnPos;
 				_guerVehicles pushBack _vehicle;
 				[_vehicle] execVM "scripts\UPSMON\MON_artillery_add.sqf";
 				_unit assignAsGunner _vehicle;
@@ -164,7 +164,7 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 			//Militiamen use the statics placed by player
 			if ((_unitType == guer_sol_RFL) AND (count _statics > 0)) exitWith {
 				_static = _statics select 0;
-				if (typeOf _static == guer_stat_mortar) then {
+				if (typeOf _static == guer_stat_MGH) then {
 					_unit = _gunnerGroup createUnit [_unitType, _markerPos, [], 0, "NONE"];
 					_unit moveInGunner _static;
 					[_static] execVM "scripts\UPSMON\MON_artillery_add.sqf";

@@ -10,7 +10,7 @@ guer_veh_truck = "B_G_Van_01_transport_F"; // default transport for squads
 guer_veh_engineer = "B_G_Offroad_01_repair_F";
 guer_veh_technical = "B_G_Offroad_01_armed_F";
 guer_veh_quad = "B_G_Quadbike_01_F"; // default transport for snipers
-guer_veh_offroad = "I_C_Offroad_02_LMG_F"; // default transport for teams
+guer_veh_offroad = "B_G_Offroad_01_F"; // default transport for teams
 guer_veh_dinghy = "C_Boat_Civil_01_F";
 
 guer_sol_AA = "B_G_Soldier_lite_F"; // AA trooper in player groups
@@ -28,7 +28,7 @@ guer_sol_RFL = "B_G_Soldier_F"; // playable
 guer_sol_SL = "B_G_Soldier_SL_F"; //
 guer_sol_SN = "B_G_Sharpshooter_F"; //
 guer_sol_TL = "B_G_Soldier_TL_F"; // playable, player-only
-guer_sol_UN = "B_G_Soldier_unarmed_F"; // mortar gunner
+guer_sol_HMG = "B_G_Soldier_unarmed_F"; // HMG gunner
 
 guer_POW = "B_G_Survivor_F"; //
 
@@ -47,50 +47,52 @@ guer_grp_team = "IRG_InfTeam";
 
 guer_flag = "Flag_FIA_F";
 
-guer_soldierArray = [guer_sol_RFL,guer_sol_R_L,guer_sol_UN,guer_sol_AR,guer_sol_MED,guer_sol_ENG,guer_sol_EXP,guer_sol_GL,guer_sol_TL,guer_sol_AM,guer_sol_MRK,guer_sol_LAT,guer_sol_SL,guer_sol_OFF,guer_sol_SN,guer_sol_AA];
+guer_soldierArray = [guer_sol_RFL,guer_sol_R_L,guer_sol_HMG,guer_sol_AR,guer_sol_MED,guer_sol_ENG,guer_sol_EXP,guer_sol_GL,guer_sol_TL,guer_sol_AM,guer_sol_MRK,guer_sol_LAT,guer_sol_SL,guer_sol_OFF,guer_sol_SN,guer_sol_AA];
 
 // ===== GEAR ===== \\
 guer_radio_TFAR = "tf_anprc152";
-if !(activeAFRF) then {
+if !(activeAFRF && activeUSAF && activeGREF) then {
 	/*
 	These are the vehicles and statics that you can buy at HQ. Currently, the array requires a strict(!) order.
 	0-2: civilian vehicles
 	3-10: military vehicles and statics
 	*/
 
-if (worldname == "Tanoa") then {
-	vfs = [
-		"C_Offroad_02_unarmed_F_green",
-		"C_Van_01_transport_F",
-		"C_Heli_Light_01_civil_F",
-		"O_LSV_02_unarmed_F",
-		"I_C_Offroad_02_unarmed_F",
-		"I_C_Van_01_transport_F",
-		"I_G_Offroad_01_armed_F",
-		"I_HMG_01_high_F",
-		"I_G_Mortar_01_F",
-		"I_static_AT_F",
-		"I_static_AA_F",
-		"C_Quadbike_01_F"
+	if (worldname == "Tanoa") then {
+		vfs = [
+			"C_Offroad_02_unarmed_F_green",
+			"C_Van_01_transport_F",
+			"C_Heli_Light_01_civil_F",
+			"C_Quadbike_01_F",
+			"O_LSV_02_unarmed_F",
+			"I_C_Offroad_02_unarmed_F",
+			"I_C_Van_01_transport_F",
+			"I_G_Offroad_01_armed_F",
+			"I_HMG_01_high_F",
+			"I_G_Mortar_01_F",
+			"I_static_AT_F",
+			"I_static_AA_F"
+			
 		];
 
-		} else {
+	} else {
 
-	vfs = [
-		"C_Offroad_01_F",
-		"C_Van_01_transport_F",
-		"C_Heli_Light_01_civil_F",
-		"O_LSV_02_unarmed_F",
-		"B_G_Offroad_01_F",
-		"B_G_Van_01_transport_F",
-		"B_G_Offroad_01_armed_F",
-		"B_HMG_01_high_F",
-		"B_G_Mortar_01_F",
-		"B_static_AT_F",
-		"B_static_AA_F",
-		"C_Quadbike_01_F"
-	];
-};
+		vfs = [
+			"C_Offroad_01_F",
+			"C_Van_01_transport_F",
+			"C_Heli_Light_01_civil_F",
+			"C_Quadbike_01_F",
+			"O_LSV_02_unarmed_F",
+			"B_G_Offroad_01_F",
+			"B_G_Van_01_transport_F",
+			"B_G_Offroad_01_armed_F",
+			"B_HMG_01_high_F",
+			"B_G_Mortar_01_F",
+			"B_static_AT_F",
+			"B_static_AA_F"
+			
+		];
+	};
 
 	guer_gear_vestAdv = "V_PlateCarrierIAGL_oli";
 	guer_gear_vestMedic = "";
@@ -125,7 +127,8 @@ if (worldname == "Tanoa") then {
 	vfs = [
 		"C_Offroad_01_F",
 		"C_Van_01_transport_F",
-		"RHS_Mi8amt_civilian",
+		"rhs_uh1h_hidf_unarmed",
+		"C_Quadbike_01_F",
 		"rhs_uaz_open_MSV_01",
 		"B_G_Offroad_01_F",
 		"rhs_gaz66o_msv",
@@ -134,8 +137,9 @@ if (worldname == "Tanoa") then {
 		"rhs_2b14_82mm_msv",
 		"rhs_Kornet_9M133_2_vdv",
 		"rhs_Igla_AA_pod_msv",
-		"C_Quadbike_01_F",
-		"rhs_gaz66_r142_vdv"
+		"rhs_gaz66_r142_vdv",
+		"rhsgref_ins_g_ZU23",
+		"B_G_Offroad_01_AT_F"
 	];
 
 	guer_gear_vestAdv = "rhs_6b23_6sh116_flora";

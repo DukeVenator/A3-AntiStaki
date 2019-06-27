@@ -116,7 +116,7 @@ server setVariable ["genATlocked",true,true];
 server setVariable ["genAAlocked",true,true];
 
 //Pricing values for soldiers, vehicles
-{server setVariable [_x,50,true]} forEach [guer_sol_RFL,guer_sol_R_L,guer_sol_UN];
+{server setVariable [_x,50,true]} forEach [guer_sol_RFL,guer_sol_R_L,guer_sol_HMG];
 {server setVariable [_x,100,true]} forEach [guer_sol_MED,guer_sol_ENG,guer_sol_EXP,guer_sol_TL,guer_sol_AM];
 {server setVariable [_x,400,true]} forEach [guer_sol_AR,guer_sol_GL,guer_sol_MRK,guer_sol_LAT]; // Stef Temporarnely increase to balance the not requirement
 {server setVariable [_x,150,true]} forEach [guer_sol_SL,guer_sol_OFF,guer_sol_SN,guer_sol_AA];
@@ -134,18 +134,20 @@ server setVariable ["genAAlocked",true,true];
 server setVariable [vfs select 0,300,true];		//Civi Offroad
 server setVariable [vfs select 1,600,true];		//Civi Truck
 server setVariable [vfs select 2,6000,true];	//Civi Helicopter
-server setVariable [vfs select 3,100,true];		//Light transport 6 spots
-server setVariable [vfs select 4,200,true];		//Unarmed Offroad
-server setVariable [vfs select 5,450,true];		//Military Truck
-server setVariable [vfs select 6,700,true];		//Armed Offroad
-server setVariable [vfs select 7,400,true];		//Static MG
-server setVariable [vfs select 8,800,true];		//Static Mortar
-server setVariable [vfs select 9,800,true];		//Static AT
-server setVariable [vfs select 10,800,true];	//Static AA
-server setVariable [vfs select 11,50,true];		//Civi Quadbike
+server setVariable [vfs select 3,50,true];		//Civi Quadbike
+server setVariable [vfs select 4,100,true];		//Light transport 6 spots
+server setVariable [vfs select 5,200,true];		//Unarmed Offroad
+server setVariable [vfs select 6,450,true];		//Military Truck
+server setVariable [vfs select 7,700,true];		//Armed Offroad
+server setVariable [vfs select 8,400,true];		//Static MG
+server setVariable [vfs select 9,800,true];		//Static Mortar
+server setVariable [vfs select 10,800,true];		//Static AT
+server setVariable [vfs select 11,800,true];	//Static AA
+server setVariable [vfs select 14,1000,true];		//Armed Offroad AT
+
 
 if (activeAFRF) then {
-	server setVariable [vfs select 2,6000,true];
+	server setVariable [vfs select 2,2000,true];
 	server setVariable [vfs select 12,600,true];
 	server setVariable [vehTruckAA, 800, true];
 };
@@ -180,7 +182,7 @@ server setVariable ["testMode",false,true];
 staticsToSave = []; publicVariable "staticsToSave";
 staticsData = []; publicVariable "staticsData";
 prestigeOPFOR = 50;//Initial % support for AAF on each city
-prestigeBLUFOR = 40;//Initial % FIA support on each city
+prestigeBLUFOR = 0;//Initial % FIA support on each city
 planesAAFmax = 0;
 helisAAFmax = 0;
 APCAAFmax = 0;

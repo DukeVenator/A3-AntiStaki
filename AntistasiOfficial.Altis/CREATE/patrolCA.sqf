@@ -1,7 +1,8 @@
 if (!isServer and hasInterface) exitWith {};
-params ["_marker",["_forceBase",""]];
+
 if (server getVariable "blockCSAT") exitWith {diag_log format ["Info: Small attack on %1 called off, communications blocked.", _marker]};
 
+params ["_marker",["_forceBase",""]];
 private ["_markerPos","_allVehicles","_allGroups","_allSoldiers","_base","_airport","_forcedAttack","_exit","_nearestMarker","_radioContact","_involveCSAT","_threatEvaluation","_attackDuration","_originPosition","_maxCounter","_vehicleType","_timeOut","_spawnPosition","_vehicleData","_vehicle","_vehicleGroup","_redVehicles","_redGroups","_redSoldiers","_wp_01","_wp_02","_wp_03","_groupType","_group","_dismountPosition","_helipad","_posData","_initVehicle","_posRoad","_dir","_vehicleArray","_initData","_groupCounter","_seats","_groupTwo"];
 
 _allVehicles = [];
@@ -27,7 +28,7 @@ if !(_forceBase == "") then {
 
 //Conditions to prevent the counterattack
 	//diag_fps
-		if (!(_forcedAttack) AND (count allunits > 120)) exitWith {diag_log format ["Info: Small attack on %1 called off, too many units.", _marker]};
+		if (!(_forcedAttack) AND (count allunits > 200)) exitWith {diag_log format ["Info: Small attack on %1 called off, too many units.", _marker]};
 
 		_exit = false;
 	//another counterattack active in same zone (disabled)

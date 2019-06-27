@@ -38,7 +38,7 @@ _groups = _data select 1;
 _vehicles = _data select 2;
 
 (_vehicles select 0) limitSpeed 50;
-(_vehicles select 1) limitSpeed 60;
+(_vehicles select 1) limitSpeed 55;
 
 _numSoldiers = count _soldiers;
 

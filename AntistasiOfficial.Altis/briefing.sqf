@@ -4,8 +4,6 @@ waitUntil {!isNull player};
 
 player createDiaryRecord ["Diary",[localize "STR_BR_8CNT",localize "STR_BR_8CNT_T"]];
 
-player createDiaryRecord ["Diary",[localize "STR_BR_7DNT",localize "STR_BR_7DNT_T"]];
-
 player createDiaryRecord ["Diary",[localize "STR_BR_6COMPMOD",localize "STR_BR_6CP"]];
 
 player createDiaryRecord ["Diary",[localize "STR_BR_5ANTOPT",localize "STR_BR_5AO"]];

@@ -13,7 +13,6 @@ _list = [];
 	{
 		_points = 0;
 
-		//If ([leader _grp,_x,_npcpos vectordistance ((_x getvariable "UPSMON_TargetInfo") select 0),130] call UPSMON_Haslos) then MODIFIED BY BARBOLANI
 		If ([leader _grp,_x,_npcpos distance (getPosATL _x),130] call UPSMON_Haslos) then
 		{
 			_points = _points + 200;

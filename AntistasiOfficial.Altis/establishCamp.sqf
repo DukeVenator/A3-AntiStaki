@@ -13,7 +13,7 @@ if (_tipo == "delete") exitWith {
 	_coste = 0;
 	_hr = 0;
 	_formato = ([guer_grp_sniper, "guer"] call AS_fnc_pickGroup);
-	if !(typeName _tipo == "ARRAY") then {
+	if !(typeName _tipogrupo == "ARRAY") then {
 		_tipogrupo = [_formato] call groupComposition;
 	};
 	{_coste = _coste + (server getVariable _x); _hr = _hr +1} forEach _tipogrupo;

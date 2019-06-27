@@ -1032,14 +1032,6 @@ if (activeACE) then {
 		"ACE_DefusalKit",
 		"ACE_MapTools",
 		"ACE_Flashlight_MX991",
-		"ACE_Flashlight_MX991",
-		"ACE_Flashlight_KSF1",
-		"ACE_DAGR",
-		"ACE_microDAGR",
-        "ACE_ATragMX",
-        "ACE_Kestrel4500",
-        "ACE_UAVBattery",
-        "ACE_HuntIR_monitor",
 		"ACE_Sandbag_empty",
 		"ACE_wirecutter",
 		"ACE_RangeTable_82mm",
@@ -1057,14 +1049,7 @@ if (activeACE) then {
 		"ACE_bloodIV",
 		"ACE_epinephrine",
 		"ACE_morphine",
-		"ACE_morphine",
-		"ACE_bodyBag",
-		"ACE_Fortify",
-		"ACE_Banana",
-		"ACE_Flashlight_XL50",
-		"ACE_IR_Strobe_Item",
-		"ACE_SpraypaintRed",
-		"ACE_SpraypaintBlue"
+		"ACE_bodyBag"
 	];
 
 	aceAdvMedItems = [
@@ -1088,8 +1073,16 @@ if (activeACE) then {
 		"ACE_surgicalKit",
 		"ACE_tourniquet",
 		"ACE_adenosine",
-		"ACE_atropine"
+		"ACE_atropine"		
 	];
+	// to support adv ace medical
+	if (isClass (configfile >> "CfgPatches" >> "adv_aceCPR")) then 
+	{
+		if(isClass (configfile >> "CfgPatches" >> "adv_aceSplint")) then
+		{
+			aceAdvMedItems = aceAdvMedItems + ["adv_aceSplint_splint","adv_aceCPR_AED"];
+		};			
+	};
 
 };
 
@@ -1113,7 +1106,7 @@ aceadvmedical = [
 
 ];
 
-blockedWeapons = ["rhs_weap_svd","rhs_weap_rpg18","rhs_weap_strela","rhs_weap_svd_pso1","rhs_weap_pkp_pkas","rhs_weap_pkp_1p63","rhs_weap_pkp_1p29"];
+blockedWeapons = ["rhs_weap_svd","rhs_weap_rpg18","rhs_weap_strela","rhs_weap_svd_pso1","rhs_weap_pkp_pkas","rhs_weap_pkp_1p63","rhs_weap_pkp_1p29","rhs_weap_panzerfaust60","rhs_weap_mg42"];
 
 gear_allMagazines = [];
 {

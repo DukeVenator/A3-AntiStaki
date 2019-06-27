@@ -69,13 +69,13 @@ if (_isInfantry) then {
 			_vehicle = vehTruckAA createVehicle _spawnPos;
 			_vehicle setDir _direction;
 			_group = createGroup side_blue;
-			_unit = _group createUnit [guer_sol_UN, _roadPos, [],0, "NONE"];
+			_unit = _group createUnit [guer_sol_HMG, _roadPos, [],0, "NONE"];
 			_unit assignAsDriver _vehicle;
 			_unit moveInDriver _vehicle;
-			_unit = _group createUnit [guer_sol_UN, _roadPos, [],0, "NONE"];
+			_unit = _group createUnit [guer_sol_HMG, _roadPos, [],0, "NONE"];
 			_unit moveInGunner _vehicle;
 			_unit assignAsGunner _vehicle;
-			_unit = _group createUnit [guer_sol_UN, _roadPos, [],0, "NONE"];
+			_unit = _group createUnit [guer_sol_HMG, _roadPos, [],0, "NONE"];
 			_unit moveInCommander _vehicle;
 			_unit assignAsCommander _vehicle;
 			_group setGroupId [format ["M.AA-%1",{side (leader _x) == side_blue} count allGroups]];
@@ -86,10 +86,10 @@ if (_isInfantry) then {
 			_vehicle = guer_veh_technical_AT createVehicle _spawnpos;
 			_vehicle setDir _direction;
 			_group = createGroup side_blue;
-			_unit = _group createUnit [guer_sol_UN, _roadPos, [],0,"NONE"];
+			_unit = _group createUnit [guer_sol_HMG, _roadPos, [],0,"NONE"];
 			_unit assignAsDriver _vehicle;
 			_unit moveInDriver _vehicle;
-			_unit = _group createUnit [guer_sol_UN, _roadPos, [],0,"NONE"];
+			_unit = _group createUnit [guer_sol_HMG, _roadPos, [],0,"NONE"];
 			_unit moveInGunner _vehicle;
 			_unit assignAsGunner _vehicle;
 			_group setGroupId [format ["M.AT-%1",{side (leader _x) == side_blue} count allGroups]];
@@ -106,7 +106,7 @@ if (_isInfantry) then {
 		};
 		_static = _groupCategory createVehicle _spawnPos;
 		[_static] spawn VEHinit;
-		_unit = _group createUnit [guer_sol_UN, _spawnPos, [],0, "NONE"];
+		_unit = _group createUnit [guer_sol_HMG, _spawnPos, [],0, "NONE"];
 		_group setVariable ["staticAutoT",false,true];
 		if (_groupCategory isEqualTo guer_stat_mortar) then {
 			_unit moveInGunner _static;

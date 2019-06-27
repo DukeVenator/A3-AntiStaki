@@ -12,7 +12,7 @@ Returns:
 private ["_unit","_shooter","_grpId"];
 _unit = _this select 0;
 _shooter = _this select 1;
-if (typeName _shooter != typeName objNull) then {_shooter = _unit};//added by Barbolani to avoid .rpt error
+if (typeName _shooter != typeName objNull) then {_shooter = _unit};
 _grp = group _unit;
 
 

@@ -65,7 +65,7 @@ if ((dateToNumber date > _fechalimnum) or (!alive _camion)) then
 	_resourcesAAF = server getVariable "resourcesAAF";
 	_resourcesAAF = _resourcesAAF + 5000;
 	server setVariable ["resourcesAAF",_resourcesAAF,true];
-	[-1000] remoteExec ["AS_fnc_increaseAttackTimer",2];
+	[-1800] remoteExec ["AS_fnc_increaseAttackTimer",2];
 	[-10,Slowhand] call playerScoreAdd;
 	}
 else
@@ -111,8 +111,8 @@ waitUntil {sleep 1; (dateToNumber date > _fechalimnum) or (!alive _camion) or (_
 if ((_camion distance _posbase < 50) and (dateToNumber date < _fechalimnum)) then
 	{
 	_tsk = ["LOG",[side_blue,civilian],[[_tskDesc,_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4, A3_Str_INDEP],_tskTitle,_mrkfin],_posicion,"SUCCEEDED",5,true,true,"Interact"] call BIS_fnc_setTask;
-	[0,10000] remoteExec ["resourcesFIA",2];
-	[-40,0] remoteExec ["prestige",2];
+	[0,5000] remoteExec ["resourcesFIA",2];
+	[-20,0] remoteExec ["prestige",2];
 	[1800] remoteExec ["AS_fnc_increaseAttackTimer",2];
 	{if (_x distance _camion < 500) then {[10,_x] call playerScoreAdd}} forEach (allPlayers - (entities "HeadlessClient_F"));
 	[5,Slowhand] call playerScoreAdd;
@@ -143,3 +143,5 @@ deleteGroup _grupo;
 
 deleteMarker _mrk;
 deleteMarker _mrkfin;
+
+

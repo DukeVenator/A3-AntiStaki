@@ -43,7 +43,7 @@ if (isMultiplayer) then {
 	diag_log format ["Antistasi MP Client. initVar is public. Version %1",antistasiVersion];
 };
 
-_title = ["A3 - Antistasi","by Barbolani",antistasiVersion] spawn BIS_fnc_infoText;
+_title = ["A3 - Antistasi","A3 Antistasi Community",antistasiVersion] spawn BIS_fnc_infoText;
 
 //Multiplayer start
 if (isMultiplayer) then {
@@ -85,8 +85,7 @@ player addWeapon "ItemWatch";
 // In order: controller, TK counter, funds, spawn-trigger, rank, score, known by hostile AI
 player setVariable ["owner",player,true];
 player setVariable ["punish",0,true];
-// TO DO : reset dinero 100
-player setVariable ["dinero",10000,true];
+player setVariable ["dinero",500,true];
 player setVariable ["BLUFORSpawn",true,true];
 player setVariable ["ASrank",rank player,true];
 player setVariable ["score", [0,25] select (player == Slowhand),true];
@@ -250,10 +249,7 @@ if !(isMultiplayer) then {
 [player] execVM "OrgPlayers\unitTraits.sqf";
 [player] spawn rankCheck;
 [player] spawn localSupport;
-if ((['AS_third', 0] call BIS_fnc_getParamValue) == 1) then {[] execVM "Scripts\ThirdPerson.sqf";};
-if ((['AS_hillc', 0] call BIS_fnc_getParamValue) == 1) then {[] execVM "Scripts\duke_uphillMovement.sqf";};
-if ((['AS_hlift', 0] call BIS_fnc_getParamValue) == 1) then {[] execVM "Scripts\HeavyLift.sqf";};
-[] execVM "Scripts\Maredea\Maredea.sqf";
+
 //Sparker's WarStatistics and roadblock spawning script. Remove these lines if you don't need it:
 //(from here)//
 if(isMultiplayer) then

@@ -1,5 +1,5 @@
 
-if (true) exitWith {}; //BARBOLANI: will disable this feature as Antistasi has all UPSMon units as garrisoned ones and it's very bugged.
+if (true) exitWith {};
 
 private ["_grp","_dist","_ratio","_supstatus","_unitsneedammo","_typeofgrp","_assignedvehicles","_attackpos"];
 
@@ -34,7 +34,7 @@ If (_grp getvariable ["UPSMON_Grpmission",""] != "RETREAT") then
 							If (_AttackPos select 0 != 0 && _AttackPos select 1 != 0) then
 								{
 								if (side (leader _grp) == side_green) then {[_attackPos] remoteExec ["patrolCA", call AS_fnc_getNextWorker]};
-								};//by Barbolani so AAF UPSMon garrisons call QRF
+								};
 						};
 					};
 				};

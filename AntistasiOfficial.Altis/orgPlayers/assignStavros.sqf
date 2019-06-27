@@ -55,5 +55,5 @@ _selectable = objNull;
 if (!isNull _selectable) then {
  	[_selectable] call stavrosInit;
 	sleep 5;
-	[[name Slowhand, name _selectable, _disconnected],{_text =""; if (_this select 2) then {_text = format [localize "STR_HINTS_COMMANDER_DIS", _this select 1]} else {_text = format [localize "STR_HINTS_COMMANDER_REP", _this select 0, _this select 1]}; hint _text;}] remoteExec ["call",0];
+	[[name Slowhand, name _selectable, _disconnected],{_text ="", if (_this select 2) then {_text = format [localize "STR_HINTS_COMMANDER_DIS", _this select 1]} else {_text = format [localize "STR_HINTS_COMMANDER_REP", _this select 0, _this select 1]}; hint _text;}] remoteExec ["call",0];
 };

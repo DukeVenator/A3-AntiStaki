@@ -327,6 +327,7 @@ class RscEdit {
 #define BOX_H_6 (0.40 * safezoneH)
 #define BOX_H_8 (0.50 * safezoneH)
 #define BOX_H_10 (0.60 * safezoneH)
+#define BOX_H_12 (0.70 * safezoneH)
 
 #define FRAME_W (0.425038 * safezoneW)
 #define FRAME_H_2 (0.18 * safezoneH)
@@ -334,7 +335,7 @@ class RscEdit {
 #define FRAME_H_6 (0.37 * safezoneH)
 #define FRAME_H_8 (0.462103 * safezoneH)
 #define FRAME_H_10 (0.560125 * safezoneH)
-
+#define FRAME_H_12 (0.660125 * safezoneH)
 
 #define BTN_X_L (0.272481 * safezoneW + safezoneX)
 #define BTN_X_R (0.482498 * safezoneW + safezoneX)

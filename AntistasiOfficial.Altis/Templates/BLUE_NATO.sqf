@@ -12,7 +12,7 @@
 
 	//Categories
 	planesNATOTrans = bluHeliTrans;									// \Create\NATOCA.sqf selectrandom
-	planesNATO = bluHeliTrans + bluHeliArmed + bluHeliGunship + bluCASFW + bluHeliTS + bluHeliDis + bluHeliRope;	//All Air Assets
+	planesNATO = bluHeliTrans + bluHeliArmed + bluHeliGunship + bluCASFW + bluHeliTS + bluHeliDis, bluHeliRope;	//All Air Assets
 
 //Groundvehicles		//Class id									//.sqf presence
 	bluMBT = 			["B_MBT_01_cannon_F","B_MBT_01_TUSK_F"];	// \CREATE\NATOArmor.sqf selectrandom

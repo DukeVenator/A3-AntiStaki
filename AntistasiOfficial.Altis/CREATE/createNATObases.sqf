@@ -104,38 +104,37 @@ _allGroups pushBack _group;
 
 		_counter = _counter + 1;
 	};
-	*/
 
-//Initialise NATO units
-_maxVehicles = 1 max (round ((_size/30)*_support));
-_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
-_group = [_markerPos, side_blue, _groupType] call BIS_Fnc_spawnGroup;
-sleep 1;
-[leader _group, _marker, "SAFE", "ORIGINAL","SPAWNED", "NOVEH2", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
-_allGroups pushBack _group;
+	//Initialise NATO units
+	_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
+	_group = [_markerPos, side_blue, _groupType] call BIS_Fnc_spawnGroup;
+	sleep 1;
+	[leader _group, _marker, "SAFE", "ORIGINAL","SPAWNED", "NOVEH2", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
+	_allGroups pushBack _group;
 
-_counter = 0;
-while {(spawner getVariable _marker) AND (_counter < _maxVehicles)} do {
-	if (diag_fps > minimoFPS) then {
-		while {true} do {
-			_spawnPos = [_markerPos, random _size,random 360] call BIS_fnc_relPos;
-			if (!surfaceIsWater _spawnPos) exitWith {};
+	_counter = 0;
+	while {(spawner getVariable _marker) AND (_counter < _maxVehicles)} do {
+		if (diag_fps > minimoFPS) then {
+			while {true} do {
+				_spawnPos = [_markerPos, random _size,random 360] call BIS_fnc_relPos;
+				if (!surfaceIsWater _spawnPos) exitWith {};
+			};
+
+			_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
+			_group = [_spawnPos,side_blue, _groupType] call BIS_Fnc_spawnGroup;
+			sleep 1;
+			if (_counter == 0) then {
+				[leader _group, _marker, "SAFE","SPAWNED","FORTIFY","NOVEH","NOFOLLOW"] execVM "scripts\UPSMON.sqf";
+			} else {
+				[leader _group, _marker, "SAFE","SPAWNED", "RANDOM","NOVEH", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
+			};
+			_allGroups pushBack _group;
 		};
 
-		_groupType = [bluTeam, side_blue] call AS_fnc_pickGroup;
-		_group = [_spawnPos,side_blue, _groupType] call BIS_Fnc_spawnGroup;
-		sleep 1;
-		if (_counter == 0) then {
-			[leader _group, _marker, "SAFE","SPAWNED","FORTIFY","NOVEH","NOFOLLOW"] execVM "scripts\UPSMON.sqf";
-		} else {
-			[leader _group, _marker, "SAFE","SPAWNED", "RANDOM","NOVEH", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
-		};
-		_allGroups pushBack _group;
+		_counter = _counter + 1;
 	};
-
-	_counter = _counter + 1;
 };
-
+*/
 
 //Create groups for FIA garrison
 	_gunnerGroup = createGroup side_blue;
@@ -156,10 +155,10 @@ while {(spawner getVariable _marker) AND (_counter < _maxVehicles)} do {
 		_unitType = _garrison select _counter;
 		call {
 			//Mortar
-				if (_unitType == guer_sol_UN) exitWith {
+				if (_unitType == guer_sol_HMG) exitWith {
 					_unit = _gunnerGroup createUnit [_unitType, _markerPos, [], 0, "NONE"];
 					_spawnPos = [_markerPos] call mortarPos;
-					_vehicle = guer_stat_mortar createVehicle _spawnPos;
+					_vehicle = guer_stat_MGH createVehicle _spawnPos;
 					_guerVehicles pushBack _vehicle;
 					[_vehicle] execVM "scripts\UPSMON\MON_artillery_add.sqf";
 					_unit assignAsGunner _vehicle;
@@ -168,7 +167,7 @@ while {(spawner getVariable _marker) AND (_counter < _maxVehicles)} do {
 			//Man the statics placed by player
 			if ((_unitType == guer_sol_RFL) AND (count _statics > 0)) exitWith {
 				_static = _statics select 0;
-				if (typeOf _static == guer_stat_mortar) then {
+				if (typeOf _static == guer_stat_MGH) then {
 					_unit = _gunnerGroup createUnit [_unitType, _markerPos, [], 0, "NONE"];
 					_unit assignAsGunner _static;
 					_unit moveInGunner _static;

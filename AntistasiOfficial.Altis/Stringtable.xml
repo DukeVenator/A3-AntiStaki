@@ -3,13 +3,13 @@
 	<Package name="MissionNames">
 		<Container name="MissionNames_0">
 			<Key ID="STR_MISSION_NAME_SQM">
-				<Original>Antistasi 1.8.4.5 blufor</Original>
+				<Original>[SP/CO]- Antistasi 1.9.1.3d Altis Blufor</Original>
 			</Key>
 			<Key ID="STR_MISSION_NAME_INITVAR_SQF">
-				<Original>v 1.8.4.5 Fortifications</Original>
+				<Original>v 1.9.1.3d</Original>
 			</Key>
 			<Key ID="STR_MISSION_NAME_EXT">
-				<Original>Antistasi 1.8.4.5 Test Patch 2</Original>
+				<Original>Antistasi 1.9.1.3d</Original>
 			</Key>
 		</Container>
 	</Package>
@@ -54,21 +54,6 @@
 				<Original>Autosave every 60 min</Original>
 				<Russian>Автосохранение каждые 60 минут</Russian>
 				<Spanish>Autoguardar cada 60 min</Spanish>
-			</Key>
-			<Key ID="STR_DES_THIRD">
-				<Original>Enable Third person Restrictions</Original>
-				<Russian>Translate needed</Russian>
-				<Spanish>Translate needed</Spanish>
-			</Key>
-			<Key ID="STR_DES_HILLC">
-				<Original>Enable HillClimber</Original>
-				<Russian>Translate needed</Russian>
-				<Spanish>Translate needed</Spanish>
-			</Key>
-			<Key ID="STR_DES_HLIFT">
-				<Original>Enable Heavy Lift</Original>
-				<Russian>Translate needed</Russian>
-				<Spanish>Translate needed</Spanish>
 			</Key>
 			<Key ID="STR_DES_LOADPROFILESAVE">
 				<Original>INIDIBI2: Load the game from standard profile.vars == Export from standard Antistasi save</Original>
@@ -3314,6 +3299,11 @@
 				<Russian>Внедорожник с пулемётом</Russian>
 				<Spanish>Offroad Armado</Spanish>
 			</Key>
+			<Key ID="STR_D_BUY_ARM_AT">
+				<Original>Armed Offroad AT</Original>
+				<Russian>Внедорожник с пулемётом AT</Russian>
+				<Spanish>Offroad Armado AT</Spanish>
+			</Key>
 			<Key ID="STR_D_BUY_MOR">
 				<Original>Mortar</Original>
 				<Russian>Миномёт</Russian>
@@ -3328,6 +3318,11 @@
 				<Original>Static AA</Original>
 				<Russian>Станк. ЗУ</Russian>
 				<Spanish>AA Estático</Spanish>
+			</Key>
+			<Key ID="STR_D_BUY_ST_AA_ZU_23">
+				<Original>Static AA ZU 23</Original>
+				<Russian>Статический TO 23</Russian>
+				<Spanish>AA Estático ZU 23</Spanish>
 			</Key>
 			<Key ID="STR_D_BUY_APC">
 				<Original>APC</Original>
@@ -3524,10 +3519,10 @@
 				<Russian>Стрелок ГП</Russian>
 				<Spanish>Granadero</Spanish>
 			</Key>
-			<Key ID="STR_D_REC_MORTAR">
-				<Original>Recruit Mortar</Original>
-				<Russian>Миномёт</Russian>
-				<Spanish>Mortero</Spanish>
+			<Key ID="STR_D_REC_HMG">
+				<Original>Recruit HMG</Original>
+				<Russian>Тяжелый пулемет</Russian>
+				<Spanish>Ametralladora pesada</Spanish>
 			</Key>
 			<Key ID="STR_D_REC_AT">
 				<Original>Recruit AT</Original>
@@ -5872,46 +5867,6 @@
 					Adding manned static weapons: assemble a static gun, recruit a militiaman and he will man the gun. Garrison Info (viewed at HQ Map) will display the number of manned static weapons.&lt;br/&gt;&lt;br/&gt;
 
 					Garrisoned mortar teams will engage anything over a long range, so be careful about where you station them to minimize friendly fire, civilian casualties and collateral damage.&lt;br/&gt;&lt;br/&gt;
-
-					Note: Huge garrisons might lower game performance, please check relative section for more information.
-				</Original>
-				<Russian>
-					Командир может использовать имеющиеся очки HR на формирование гарнизона FIA на захваченном объекте или в Штабе. Уровень бойцов в гарнизоне будет напрямую зависеть от уровня навыка войск (Army XP). Они не могут контролироваться напрямую. &lt;br/&gt;&lt;br/&gt;
-
-					В Вашем Штабе, подойдите к Флагу и выберите в меню взаимодействия -> Штаб -> Комплектовать гарнизон. Выберите точку, на которой Вы хотите разместить гарнизон, и добавьте боевые единицы.&lt;br/&gt;&lt;br/&gt;
-
-					Добавление управляемого ИИ станкового оружия: соберите станковое оружие, добавьте в гарнизон ополченца, и он будет управлять оружием. Информация о гарнизоне (просматриваемая на Карте в Штабе) отображает количество имеющихся станковых орудий.&lt;br/&gt;&lt;br/&gt;
-
-					Гарнизонные минометные команды могут начать вести огонь на большое расстояние, поэтому будьте внимательны при выборе места их размещения, чтобы свести к минимуму дружественный огонь, жертвы среди гражданского населения и побочный ущерб. &lt;br/&gt;&lt;br/&gt;
-
-					Примечание. Огромные гарнизоны могут снизить производительность игры, пожалуйста, проверьте соответствующий раздел для получения дополнительной информации.
-				</Russian>
-				<Spanish>
-					El Comandante puede invertir HR en fuerzas del FIA como guarnición de emplazamientos conquistados o en el mismo HQ. Estas tropas se ven afectadas por el nivel XP del Ejército y no pueden controlarse directamente. &lt;br/&gt;&lt;br/&gt;
-
-					En tu HQ, interactua con la Bandera, Administrar HQ, Reclutar Guarnición. Selecciona el emplazamiento donde quieras añadir unidades de guarnición.&lt;br/&gt;&lt;br/&gt;
-
-					Agregar armas estáticas manejadas: monta un arma estática, recluta un miliciano y se pondrá en el arma. En Información de Guarnición (visible en el mapa del HQ) se mostrará el número de armas estáticas manejadas.&lt;br/&gt;&lt;br/&gt;
-
-					Los equipos de mortero guarnecidos se enfrentarán a cualquier cosa en un rango largo, así que ten cuidado con dónde colocarlos para minimizar el fuego amigo, las bajas civiles y daños colaterales.&lt;br/&gt;&lt;br/&gt;
-
-					Nota: Un gran número de tropas guarnecidas pueden reducir el rendimiento del juego; verifica la sección relativa para obtener más información.
-				</Spanish>
-			</Key>
-			<Key ID="STR_BR_7DNT">
-				<Original>Donators</Original>
-				<Russian>Гарнизоны</Russian>
-				<Spanish>Guarnición</Spanish>
-			</Key>
-			<Key ID="STR_BR_7DNT">
-				<Original>
-					Suit Guy: Maredea &lt;br/&gt;&lt;br/&gt;
-
-					Special Recon: Eleros&lt;br/&gt;&lt;br/&gt;
-
-					Knights: Ghosty&lt;br/&gt;&lt;br/&gt;
-
-					Ghost Buster: Zarkos&lt;br/&gt;&lt;br/&gt;
 
 					Note: Huge garrisons might lower game performance, please check relative section for more information.
 				</Original>

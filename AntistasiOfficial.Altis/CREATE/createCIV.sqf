@@ -107,7 +107,7 @@ for "_i" from 1 to _patrolCounter do {
 			if(activeACE) then {[_vehicle, 300] call ace_refuel_fnc_setFuel;} else {_vehicle setfuelcargo 0.1;};
 			_vehicle setfuel ((random 45)+5)/100; //Random 5-50% fuel
 			_vehicle addEventHandler ["HandleDamage",{if (((_this select 1) find "wheel" != -1) and (_this select 4=="") and (!isPlayer driver (_this select 0))) then {0;} else {(_this select 2);};}];
-			_vehicle addEventHandler ["HandleDamage",           //STEF 01-09 civilian disembark on hit, thanks Barbolani
+			_vehicle addEventHandler ["HandleDamage",
 					{
 					_vehicle = _this select 0;
 					if (side(_this select 3) == WEST) then

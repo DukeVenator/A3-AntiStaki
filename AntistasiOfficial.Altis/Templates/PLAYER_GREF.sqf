@@ -29,7 +29,7 @@ guer_sol_RFL = "rhsgref_ins_g_rifleman_akm"; // playable
 guer_sol_SL = "rhsgref_ins_g_squadleader";
 guer_sol_SN = "rhsgref_ins_g_spotter";
 guer_sol_TL = "rhsgref_ins_g_rifleman"; // playable, player-only
-guer_sol_UN = "rhsgref_ins_g_pilot"; // mortar gunner
+guer_sol_HMG = "rhsgref_ins_g_pilot"; // HMG gunner
 
 guer_POW = "rhsgref_ins_g_militiaman_mosin";
 

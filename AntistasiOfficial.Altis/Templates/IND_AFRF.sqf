@@ -66,12 +66,12 @@ infList_crew = 		[sol_UN, sol_CREW, sol_CREW2, sol_CREW3, sol_CREW4, sol_DRV, so
 infList_pilots = 	[sol_HPIL, sol_HPIL2, sol_PIL];
 
 // Vehicles
-vehTrucks = 		["rhs_kamaz5350_open_vdv","rhs_kamaz5350_vdv","RHS_Ural_Open_VDV_01","RHS_Ural_VDV_01","rhs_zil131_flatbed_msv"]; // trucks that spawn at outposts, etc
+vehTrucks = 		["rhs_kamaz5350_open_vdv","rhs_kamaz5350_vdv","RHS_Ural_Open_VDV_01","RHS_Ural_VDV_01"]; // trucks that spawn at outposts, etc
 vehPatrol =			["rhs_tigr_m_vdv","RHS_Mi8mt_vvsc"]; // vehicles used for road patrols;
 if (activeGREF) then {vehPatrol = vehPatrol + ["rhsgref_BRDM2_HQ_vdv"];};
-vehAPC = 			["rhs_btr80_vdv,rhs_prp3_msv"]; // APCs
-vehIFV = 			["rhs_bmp2d_vdv","rhs_bmp1p_vdv","rhs_bmd2m","rhs_bmd2k,rhs_bmp3_msv,rhs_bmp3_late_msv,rhs_bmp3m_msv","rhs_brm1k_msv"]; // IFVs
-vehTank = 			["rhs_t72bb_tv","rhs_t72bd_tv","rhs_t90a_tv","2S25"]; // MBTs
+vehAPC = 			["rhs_btr80_vdv"]; // APCs
+vehIFV = 			["rhs_bmp2d_vdv","rhs_bmp1p_vdv","rhs_bmd2m","rhs_bmd2k"]; // IFVs
+vehTank = 			["rhs_t72bb_tv","rhs_t72bd_tv","rhs_t90a_tv","rhs_t72be_tv","rhs_t80um"]; // MBTs
 vehSupply = 		["rhs_gaz66_ammo_vdv","RHS_Ural_Fuel_VDV_01","rhs_gaz66_repair_vdv","rhs_gaz66_ap2_vdv"]; // supply vehicles (ammo, fuel, med)
 vehAmmo = 			"rhs_gaz66_ammo_vdv"; // ammo truck, for special missions
 vehFuel = 			["RHS_Ural_Fuel_VDV_01"]; // fuel truck for missions
@@ -92,9 +92,9 @@ var_AAF_groundForces = var_AAF_groundForces arrayIntersect var_AAF_groundForces;
 
 // Airforce
 heli_unarmed = 		["RHS_Mi8mt_Cargo_vvsc","RHS_Mi8MTV3_FAB_vvsc","RHS_Mi8AMTSh_FAB_vvsc","rhs_ka60_c"]; // (un-)armed transport helicopters
-heli_armed = 		["RHS_Mi24V_FAB_vdv","RHS_Mi24V_UPK23_vdv","RHS_Ka52_vvs"]; // // armed helicopters
+heli_armed = 		["RHS_Mi24V_FAB_vdv","RHS_Mi24V_UPK23_vdv"]; // // armed helicopters
 heli_escort = 		"RHS_Mi8AMTSh_vvsc";
-planes = 			["RHS_Su25SM_vvsc","rhs_T50_vvs_blueonblue"]; // attack planes
+planes = 			["RHS_Su25SM_vvsc"]; // attack planes
 heli_default = 		"RHS_Mi8mt_vvsc";
 heli_transport = 	"RHS_Mi8mt_vvsc";
 indUAV_large = 		"I_UAV_02_F"; // large UAV, unarmed
@@ -187,8 +187,6 @@ genMissiles = [
 	"rhs_rpg7_OG7V_mag",
 	"rhs_rpg7_TBG7V_mag",
 	"rhs_rpg7_PG7V_mag",
-	"rhs_rpg26_mag",
-	"rhs_rshg2_mag",
 	"rhs_mag_9k38_rocket"
 ];
 
@@ -357,11 +355,13 @@ genHelmets = [
 // Equipment unlocked by default
 if (activeGREF) then {
 	unlockedWeapons = [
-	"rhs_weap_makarov_pm",
+	"rhsusf_weap_m9",
 	"rhs_weap_savz61",
 	"rhs_weap_kar98k",
 	"rhs_weap_m38",
-	"rhs_weap_savz61_folded"
+	"rhs_weap_savz61_folded",
+	"hgun_Pistol_Signal_F",
+	"rhs_weap_rsp30_white"
 	];
 
 	unlockedRifles = [
@@ -371,17 +371,18 @@ if (activeGREF) then {
 	];
 
 	unlockedMagazines = [
-	"rhs_mag_9x18_8_57N181S",
+	"rhsusf_mag_15Rnd_9x19_JHP",
 	"rhsgref_5Rnd_762x54_m38",
 	"rhsgref_5Rnd_792x57_kar98k",
-	"rhsgref_20rnd_765x17_vz61"
-
+	"rhsgref_20rnd_765x17_vz61",
+	"6Rnd_GreenSignal_F"
 	];
 } else {
 	unlockedWeapons = [
 		"rhs_weap_makarov_pm",
 		"rhs_weap_pp2000",
-		"rhs_weap_pp2000_folded"
+		"rhs_weap_pp2000_folded",
+		"hgun_Pistol_Signal_F"
 	];
 
 	unlockedRifles = [
@@ -390,8 +391,8 @@ if (activeGREF) then {
 
 	unlockedMagazines = [
 		"rhs_mag_9x18_8_57N181S",
-		"rhs_mag_9x19mm_7n31_44"
-
+		"rhs_mag_9x19mm_7n31_44",
+		"6Rnd_GreenSignal_F"
 	];
 };
 
@@ -400,6 +401,7 @@ unlockedItems = [
 	"ItemMap",
 	"ItemWatch",
 	"ItemCompass",
+	"ItemGPS",
 	"FirstAidKit",
 	"Medikit",
 	"ToolKit",
@@ -470,6 +472,8 @@ unlockedItems = [
 	"V_BandollierB_cbr",
 	"V_BandollierB_rgr",
 	"V_BandollierB_khk",
+	"V_Rangermaster_belt",
+	"V_Chestrig_rgr",
 	"rhs_vest_pistol_holster",
 	"rhs_vest_commander",
 	"rhs_6sh46",
@@ -478,13 +482,17 @@ unlockedItems = [
 	"H_Watchcap_blk",
 	"H_Watchcap_cbr",
 	"H_Cap_headphones",
-	"H_ShemagOpen_tan"
+	"H_ShemagOpen_tan",
+	"adv_aceSplint_splint",
+	"adv_aceCPR_AED"
 ];
 
 unlockedBackpacks = [
 	"rhs_assault_umbts",
 	"rhs_assault_umbts_engineer",
-	"rhs_medic_bag"
+	"rhs_medic_bag",
+	"tf_anprc155",
+	"B_Parachute"
 
 ];
 
@@ -551,7 +559,7 @@ side_green = 	independent;
 lrRadio = "tf_anprc155_coyote";
 
 // Define the civilian helicopter that allows you to go undercover
-civHeli = "C_IDAP_Heli_Transport_02_F";
+civHeli = "RHS_Mi8amt_civilian";
 
 // Define the ammo crate to be spawned at camps
 campCrate = "Box_NATO_Equip_F";

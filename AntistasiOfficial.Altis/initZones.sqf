@@ -27,11 +27,11 @@ mrkAntenas = [];
 bancos = [];
 posbancos = [];
 supplySaveArray = [];
-safeDistance_undercover = 250;
+safeDistance_undercover = 350;
 safeDistance_garage = 200;
-safeDistance_recruit = 200;
-safeDistance_garrison = 200;
-safeDistance_fasttravel = 300;
+safeDistance_recruit = 500;
+safeDistance_garrison = 500;
+safeDistance_fasttravel = 200;
 
 // Blacklist of locations not be used as towns
 _blackList = ["Giswil","sagonisi","hill12"];

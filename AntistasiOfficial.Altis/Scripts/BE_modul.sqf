@@ -464,7 +464,7 @@ fnc_BE_broadcast = {
 			_bool = _data select 0;
 			_str = _data select 1;
 
-			_boolStr = ["not satisfied", "satisfied"] select _bool;
+			_boolStr = ["not satisfied", "satisfied"] select _bool, true;
 			_pI pushBack (format ["Requirement: %1 \nStatus: %2", _str, _boolStr]);
 		} forEach _reqs;
 	};

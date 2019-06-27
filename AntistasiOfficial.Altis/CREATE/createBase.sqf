@@ -130,7 +130,7 @@ _allGroups pushBack _groupGunners;
 //Create Vehicles
 	if (!_busy) then {
 		_spawnpool = vehPatrol + enemyMotorpool - [heli_default]; //Stef removed APC from here added fixed position with gunner inside.
-		_vehicleCount = 3 max (round (_size/45));
+		_vehicleCount = 1 max (round (_size/45));
 		//_vehicleCount = 1 max (round (_size/30)); Stef increased the size = less vehicle
 		_spawnPos = _markerPos;
 		_currentCount = 0;

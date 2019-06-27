@@ -248,7 +248,7 @@ _allies pushback _grp;
 
 //diag_log str _pointsenies;
 //diag_log str _pointsallies;
-if (_pointsallies == 0) then {_pointsallies = 0.1};//by Barbolani, to avoid bugs.
+if (_pointsallies == 0) then {_pointsallies = 0.1};
 _ratio = _pointsenies/_pointsallies;
 
 _result = [_ratio,_enicapacity,_typeofeni];

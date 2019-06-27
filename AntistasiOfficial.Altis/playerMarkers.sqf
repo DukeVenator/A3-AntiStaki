@@ -16,7 +16,7 @@ while {true} do
 				_mrk setMarkerTypeLocal "mil_triangle";
 				_mrk setMarkerColorLocal "ColorWhite";
 				_mrk setMarkerTextLocal format ["%1",name _player];
-				if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 1};
+				if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
 				//_mrk setMarkerAlphaLocal 0; // <<-- hard mode
 				_markers pushBack _mrk;
 			};
@@ -26,19 +26,19 @@ while {true} do
 			_player = _x;
 			_mrk = format ["%1",_player];
 			if (vehicle _player == _player) then{
-				if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 1};
+				if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
 				//_mrk setMarkerAlphaLocal 1; // <<-- normal mode
 				_mrk setMarkerPosLocal position _player;
 				_mrk setMarkerDirLocal getDir _player;
 				if ([_player] call AS_fnc_isUnconscious) then{
 					_mrk setMarkerTypeLocal "mil_join";
-					if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 1};
+					if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
 					//_mrk setMarkerAlphaLocal 1; // <<-- hard mode
 					_mrk setMarkerTextLocal format ["%1 Injured",name _player];
 					_mrk setMarkerColorLocal "ColorPink";
 				}else{
 					_mrk setMarkerTypeLocal "mil_triangle";
-					if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 1};
+					if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
 					//_mrk setMarkerAlphaLocal 0; // <<-- hard mode
 					_mrk setMarkerTextLocal format ["%1",name _player];
 					_mrk setMarkerColorLocal "ColorWhite";

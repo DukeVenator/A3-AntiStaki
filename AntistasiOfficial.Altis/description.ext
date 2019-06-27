@@ -1,6 +1,9 @@
-author="Barbolani taken over by Duke";
+#include "defines.hpp"
+#include "dialogs.hpp"
+
+author="A3 Antistasi Community";
 OnLoadName = $STR_MISSION_NAME_EXT;
-OnLoadMission = "Be a Resistance Leader - Be a Hero W.I.P";
+OnLoadMission = "Be a Resistance Leader - Be a Hero";
 loadScreen = "pic.paa";
 
 overviewText = "Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.";
@@ -33,13 +36,13 @@ debriefing=1;
 //showGroupIndicator = 1;
 
 class CfgTaskEnhancements
-{
+    {
     enable       = 1;            //0: disable new task features (default), 1: enable new task features & add new task markers and task widgets into the map
     3d           = 1;            //0: do not use new 3D markers (default), 1: replace task waypoints with new 3D markers
     3dDrawDist   = 3500;        //3d marker draw distance (default: 2000)
     share        = 1;            //0: do not count assigned players (default), 1: count how many players have the task assigned
     propagate    = 1;            //0: do not propagate (default), 1: propagate shared tasks to subordinates
-};
+    };
 
 
 class Header
@@ -57,18 +60,6 @@ class CfgSounds
         sound[]={"Music\fire.ogg",db+12,1.0};
         titles[]={};
     };
-    class jammer_loop
-    {
-        name = "jammer_loop";
-        sound[] = {"\sound\jammer_Effect.ogg", db+15, 1};
-        titles[] = {1,""};
-    };
-    class power_down
-    {
-        name = "power_down";
-        sound[] = {"\sound\power_down.ogg", db+15, 1};
-        titles[] = {1,""};
-    };
 };
 class CfgIdentities
 {
@@ -77,196 +68,200 @@ class CfgIdentities
         name = "Slowhand";
         nameSound = "Stavrou";
         face="GreekHead_A3_01";
-        glasses="None";
-        speaker="Male01GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male01GRE";
+	pitch=1.1;
     };
-    class amiguete
+     class amiguete
     {
         name = "Petros";
         nameSound = "Petros";
         face="GreekHead_A3_01";
-        glasses="None";
-        speaker="Male01GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male01GRE";
+	pitch=1.1;
     };
-    class tonto
+     class tonto
     {
         name = "Zorba";
         nameSound = "";
         face="GreekHead_A3_09";
-        glasses="None";
-        speaker="Male03GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male03GRE";
+	pitch=1.1;
     };
-    class Anthis
+      class Anthis
     {
         name = "Anthis";
         nameSound = "Anthis";
         face="GreekHead_A3_02";
-        glasses="None";
-        speaker="Male01GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male01GRE";
+	pitch=1.1;
     };
-    class Costa
+      class Costa
     {
         name = "Costa";
         nameSound = "Costa";
         face="GreekHead_A3_03";
-        glasses="None";
-        speaker="Male02GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male02GRE";
+	pitch=1.1;
     };
-    class Dimitirou
+      class Dimitirou
     {
         name = "Dimitirou";
         nameSound = "Dimitirou";
         face="GreekHead_A3_04";
-        glasses="None";
-        speaker="Male03GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male03GRE";
+	pitch=1.1;
     };
-    class Elias
+      class Elias
     {
         name = "Elias";
         nameSound = "Elias";
         face="GreekHead_A3_05";
-        glasses="None";
-        speaker="Male04GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male04GRE";
+	pitch=1.1;
     };
-    class Gekas
+      class Gekas
     {
         name = "Gekas";
         nameSound = "Gekas";
         face="GreekHead_A3_06";
-        glasses="None";
-        speaker="Male01GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male01GRE";
+	pitch=1.1;
     };
-    class Kouris
+      class Kouris
     {
         name = "Kouris";
         nameSound = "Kouris";
         face="GreekHead_A3_07";
-        glasses="None";
-        speaker="Male02GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male02GRE";
+	pitch=1.1;
     };
-    class Leventis
+      class Leventis
     {
         name = "Leventis";
         nameSound = "Leventis";
         face="GreekHead_A3_08";
-        glasses="None";
-        speaker="Male03GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male03GRE";
+	pitch=1.1;
     };
-    class Markos
+      class Markos
     {
         name = "Markos";
         nameSound = "Markos";
         face="GreekHead_A3_09";
-        glasses="None";
-        speaker="Male04GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male04GRE";
+	pitch=1.1;
     };
-    class Nikas
+      class Nikas
     {
         name = "Nikas";
         nameSound = "Nikas";
         face="WhiteHead_02";
-        glasses="None";
-        speaker="Male01GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male01GRE";
+	pitch=1.1;
     };
       class Nicolo
     {
         name = "Nicolo";
         nameSound = "Nicolo";
         face="WhiteHead_03";
-        glasses="None";
-        speaker="Male02GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male02GRE";
+	pitch=1.1;
     };
-    class Panas
+      class Panas
     {
         name = "Panas";
         nameSound = "Panas";
         face="WhiteHead_04";
-        glasses="None";
-        speaker="Male03GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male03GRE";
+	pitch=1.1;
     };
-    class Rosi
+       class Rosi
     {
         name = "Rosi";
         nameSound = "Rosi";
         face="WhiteHead_05";
-        glasses="None";
-        speaker="Male04GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male04GRE";
+	pitch=1.1;
     };
-    class Samaras
+       class Samaras
     {
         name = "Samaras";
         nameSound = "Samaras";
         face="WhiteHead_06";
-        glasses="None";
-        speaker="Male01GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male01GRE";
+	pitch=1.1;
     };
-    class Thanos
+       class Thanos
     {
         name = "Thanos";
         nameSound = "Thanos";
         face="WhiteHead_07";
-        glasses="None";
-        speaker="Male02GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male02GRE";
+	pitch=1.1;
     };
-    class Vega
+       class Vega
     {
         name = "Vega";
         nameSound = "Vega";
         face="WhiteHead_08";
-        glasses="None";
-        speaker="Male03GRE";
-        pitch=1.1;
+	glasses="None";
+	speaker="Male03GRE";
+	pitch=1.1;
     };
-    class Nomad
+
+        class Nomad
     {
         name = "Nomad";
         nameSound = "Nomad";
         face="WhiteHead_09";
-        glasses = "None";
-        speaker = "Male04ENGB";
-        pitch = 1.0;
+    glasses = "None";
+    speaker = "Male04ENGB";
+    pitch = 1.0;
     };
-    class Stranger
+
+        class Stranger
     {
         name = "Stranger";
         nameSound = "Stranger";
         face="GreekHead_A3_06";
-        glasses = "None";
-        speaker = "Male04GRE";
-        pitch = 1.0;
+    glasses = "None";
+    speaker = "Male04GRE";
+    pitch = 1.0;
     };
-    class Devin
+
+        class Devin
     {
         name = "Devin";
         face="WhiteHead_11";
-        glasses = "None";
-        speaker = "Male08ENG";
-        pitch = 1.0;
+    glasses = "None";
+    speaker = "Male08ENG";
+    pitch = 1.0;
     };
-    class Dusty
+
+            class Dusty
     {
         name = "Mayor Dusty";
         face="WhiteHead_08";
-        glasses = "None";
-        speaker = "Male08ENG";
-        pitch = 1.0;
+    glasses = "None";
+    speaker = "Male08ENG";
+    pitch = 1.0;
     };
 };
 
@@ -276,7 +271,7 @@ class CfgDebriefing
 	{
 		title = "V I C T O R Y";
 		subtitle = "Altis is Ours!";
-		description = "The population of Altis loves you!<br/>The FIA brave soldiers prooved their valour, and Barbolani, Altis new Prime Minister, could at last to have a nice holliday. A deserved rest in a Greek island, drinking with Petros.";
+		description = "The population of Altis loves you!<br/>The FIA brave soldiers prooved their valour, and Petros, Altis new Prime Minister, could at last to have a nice holliday. A deserved rest in a Greek island, drinking with Petros.";
 		picture = "n_inf";
 		pictureColor[] = {0.0,0.5,0.0,1};
 	};
@@ -317,36 +312,36 @@ class CfgDebriefing
 class Params {
     class AS_enableCampaignReset {
         title = $STR_DES_ATSAFC;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 0;
-        typeName = "BOOL";
-        force = 1;
+            values[] = {0,1};
+            texts[] = {$STR_DES_OFF,$STR_DES_ON};
+            default = 0;
+            typeName = "BOOL";
+            force = 1;
     };
     class AS_enableSwitchComm {
         title = $STR_DES_ESWCMD;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 0;
-        typeName = "BOOL";
-        force = 1;
+            values[] = {0,1};
+            texts[] = {$STR_DES_OFF,$STR_DES_ON};
+            default = 0;
+            typeName = "BOOL";
+            force = 1;
     };
     class AS_enableServerMember {
         title = $STR_DES_ESRMBR;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 1;
-        typeName = "BOOL";
-        force = 1;
+            values[] = {0,1};
+            texts[] = {$STR_DES_OFF,$STR_DES_ON};
+            default = 1;
+            typeName = "BOOL";
+            force = 1;
     };
 	//added by Fireman 12/08/2017
 	class AS_param_tkPenalty {
         title = $STR_DES_PPFT;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 0;
-        typeName = "BOOL";
-        force = 1;
+            values[] = {0,1};
+            texts[] = {$STR_DES_OFF,$STR_DES_ON};
+            default = 0;
+            typeName = "BOOL";
+            force = 1;
     };
     class AS_param_onlyPermanentMembers {
         title = $STR_DES_OPMAEFCAS;
@@ -366,31 +361,7 @@ class Params {
         title = $STR_DES_AUTOSAVE;
         values[] = {0,1};
         texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 1;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class AS_third {
-        title = $STR_DES_THIRD;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 1;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class AS_hillc {
-        title = $STR_DES_HILLC;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 1;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class AS_hlift {
-        title = $STR_DES_HLIFT;
-        values[] = {0,1};
-        texts[] = {$STR_DES_OFF,$STR_DES_ON};
-        default = 1;
+        default = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -413,9 +384,6 @@ class Params {
 };
 
 class CfgFunctions {
-	#include "functions\functions.hpp"
+	#include "Functions\functionList.hpp"
 	#include "JeroenArsenal\functions.hpp"
 };
-
-#include "defines.hpp"
-#include "dialogs.hpp"

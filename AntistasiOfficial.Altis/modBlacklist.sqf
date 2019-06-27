@@ -2,7 +2,7 @@ _mal = false;
 
 if (missionNamespace getVariable ["MCC_isMode",false]) then {_mal = true};
 if (isClass (configfile >> "CfgVehicles" >> "ALiVE_require")) then {_mal = true};
-if ("asr_ai3_main" in activatedAddons) then {_mal = true};
+// if ("asr_ai3_main" in activatedAddons) then {_mal = true};
 
 if (_mal) then
 	{

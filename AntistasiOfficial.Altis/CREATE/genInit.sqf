@@ -3,7 +3,7 @@ private ["_skill","_aiming","_spotD","_spotT","_cour","_comm","_aimingSh","_aimi
 
 _unit setVariable ["OPFORSpawn",true,true];
 
-_skill = 0.3; //Stef switched to standard value. AAF is an army, they're trained already.
+_skill = 0.4; //Stef switched to standard value. AAF is an army, they're trained already.
 _unit setSkill (_skill + 0.1);
 _aiming = _skill + 0.1;
 _spotD = _skill + 0.1;

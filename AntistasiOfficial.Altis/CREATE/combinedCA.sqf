@@ -67,7 +67,7 @@ if (_involveCSAT) then {
 	_originPosition = getMarkerPos "spawnCSAT";
 	_originPosition set [2,300];
 	_maxCounter = 3;
-	if ((_base == "") OR (_airport == "")) then {_maxCounter = 3}; //Duke increased to 4 to offset time increase
+	if ((_base == "") OR (_airport == "")) then {_maxCounter = 3}; //Stef 21/01/2018 it was 6 before, no need to send that many CSAT, just increase too much AI spanwed
 
 	//Creating CSAT airtransports
 	for "_i" from 1 to _maxCounter do {
@@ -119,7 +119,7 @@ if (_involveCSAT) then {
 	};
 
 	_task = ["AtaqueAAF",[side_blue,civilian],[["STR_TSK_TD_CA_CREATE_RED",A3_Str_INDEP,A3_Str_RED,_targetName,_originName],["%1/%2 Attack",A3_Str_INDEP,A3_Str_RED],_marker],getMarkerPos _marker,"CREATED",10,true,true,"Defend"] call BIS_fnc_setTask;
-	[_targetName,{["TaskSucceeded", ["", format [localize "STR_TSK_TD_CA_TARGET",_this]]] call BIS_fnc_showNotification}] remoteExec ["call", 0];
+	[_targetNam,{["TaskSucceeded", ["", format [localize "STR_TSK_TD_CA_TARGET",_this]]] call BIS_fnc_showNotification}] remoteExec ["call", 0];
 
 	[_marker] spawn {
 		params ["_targetMarker"];
@@ -382,3 +382,4 @@ waitUntil {sleep 1; !(spawner getVariable _marker)};
 
 deleteVehicle _spawner;
 deleteGroup _spawnergroup;
+
